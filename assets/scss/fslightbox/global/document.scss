@@ -1,8 +1,10 @@
 .fslightbox-open {
   overflow: hidden;
   height: 100%;
-
-  body {
-    margin-right: 10px;
+  
+  @include mq(small) {
+    body {
+      margin-right: 10px;
+    }
   }
 }
