@@ -86,7 +86,7 @@ a {
     }
   }
 
-  &[data-fslightbox="video"] {
+  &.video-link {
     &:before {     
       z-index: 1;     
       background: transparent;

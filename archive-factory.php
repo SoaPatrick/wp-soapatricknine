@@ -25,7 +25,7 @@ get_header(); ?>
         <path class="primary" d="M136 480H24a24 24 0 0 1-24-24V56a24 24 0 0 1 24-24h112a24 24 0 0 1 24 24v400a24 24 0 0 1-24 24z"></path>
       </svg>                        
     </div>       
-    <h1><?php esc_html_e( 'Factory', 'soapatricknine' ) ?></h1>
+    <h1><?php esc_html_e( 'SoapFactory', 'soapatricknine' ) ?></h1>
   </header>
   <div class="site__content">
     <div class="tags">

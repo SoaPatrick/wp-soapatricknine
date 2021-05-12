@@ -12,7 +12,8 @@
     color: var(--color__link--secondary);
     font-family: $font-family__heading;
     font-size: $font-size__h4;
-    padding: 1rem 1.25rem 1rem .75rem;
+    padding: .75rem;
+    margin: .25rem;
     position: relative;
     left: 0;
     transition: all 0.25s ease-in-out;
@@ -20,10 +21,26 @@
 
     @include mq(medium) {
       padding: .25rem 0;
+      margin: 0;
     }      
-    
+
+    &.open,
     &.active {
       color: var(--color__link--primary);
+      background: var(--color__highlight);
+      border-radius: 50%;
+
+      .primary {
+        fill: var(--color__link--secondary);
+      }
+
+      .secondary {
+        fill: var(--color__body);
+      }      
+
+      @include mq(medium) {          
+        background: transparent;
+      }
     }
 
     &:hover,
@@ -37,8 +54,6 @@
       outline: 3px dotted var(--color__link--primary);
       outline-offset: -3px;
     }  
-
-
 
     @include mq(medium) {    
       &--hover {
@@ -78,6 +93,7 @@
     svg {
       width: 1rem;
       height: 1rem;
+      display: block;
 
       @include mq(medium) {
         display: none;

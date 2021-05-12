@@ -9,12 +9,12 @@
 
 ?>            
             
-<a aria-label="<?php the_title(); ?>"
+<a aria-label="<?php the_title(); ?>" data-fslightbox
   <?php 
     if(get_field('is_video')) : 
-      echo 'data-fslightbox="video" href="'. get_field('video') .'"';
+      echo 'href="'. get_field('video') .'" class="video-link"';
     else : 
-      echo 'data-fslightbox href="'. get_the_post_thumbnail_url(get_the_ID(),'large') .'"';
+      echo 'href="'. get_the_post_thumbnail_url(get_the_ID(),'large') .'"';
     endif ;
   ?>
 >

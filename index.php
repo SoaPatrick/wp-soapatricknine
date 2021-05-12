@@ -15,6 +15,11 @@
 get_header();
 
   if ( have_posts() ) :
+    
+    if(is_home()):
+      get_template_part( 'template-partials/layout/header','box' );
+    endif;
+
     while ( have_posts() ) : the_post();
       if (is_front_page()):
         get_template_part( 'template-partials/content/content-home', get_post_type() );

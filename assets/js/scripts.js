@@ -16,7 +16,7 @@ window.onload = function(){
 
   searchBtn.onclick = function() {
     searchForm.classList.toggle('open');
-    searchBtn.classList.toggle('active');
+    searchBtn.classList.toggle('open');
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     if(searchForm.classList.contains('open')) {

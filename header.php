@@ -34,9 +34,9 @@
 <?php 
   if(is_post_type_archive('lab')):
     echo 'data-theme="darkpink"';
-  elseif(is_page('5608')):
+  elseif(is_page_template('template-pages/patrick-page.php')):
     echo 'data-theme="red"';
-  elseif(is_page('4978')):
+  elseif(is_page_template('template-pages/privacy-page.php')):
     echo 'data-theme="black"';    
   endif;
 ?>
