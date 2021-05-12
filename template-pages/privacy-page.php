@@ -11,8 +11,8 @@ get_header();
 ?>
 
   <nav aria-label="breadcrumb" class="breadcrumbs">
-    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
-    <span class="breadcrumbs__item breadcrumbs__item--last"><?php esc_html_e( 'Privacy', 'soapatricknine' ) ?></span>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
+    <span class="breadcrumbs__item breadcrumbs__item--last">Privacy</span>
   </nav>    
 
   <header>
@@ -30,6 +30,11 @@ get_header();
   <div class="site__content">
     <?php the_content() ?>
   </div>
+  <footer>
+    <div class="post__meta post__meta--footer">
+      <?php soapatricknine_modified_on(); ?>
+    </div>
+  </footer>
 
 <?php
 get_footer();

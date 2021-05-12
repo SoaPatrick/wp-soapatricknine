@@ -10,17 +10,20 @@
 get_header(); ?>
 
   <nav aria-label="breadcrumb" class="breadcrumbs">
-    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
-    <span class="breadcrumbs__item breadcrumbs__item--last"><?php esc_html_e( 'Lab', 'soapatricknine' ) ?></span>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
+    <span class="breadcrumbs__item breadcrumbs__item--last">Lab</span>
   </nav>
 
   <header>
     <div class="marginal-icon marginal-icon--section">
       <?php soapatricknine_svg_icons('lab-dual'); ?>           
     </div>        
-    <h1><?php esc_html_e( 'Lab', 'soapatricknine' ) ?></h1>
+    <h1>SoapLab</h1>
   </header>
   <div class="site__content">
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+    </p>
     <div class="masonry-grid">
       <?php
         if ( have_posts() ) :

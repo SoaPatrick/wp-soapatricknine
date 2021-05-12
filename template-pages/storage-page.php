@@ -11,16 +11,16 @@ get_header();
 ?>
 
   <nav aria-label="breadcrumb" class="breadcrumbs">
-    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatrickeight' ) ?></a></span>
-    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php esc_html_e( 'Box', 'soapatrickeight' ) ?></a></span>
-    <span class="breadcrumbs__item breadcrumbs__item--last"><?php esc_html_e( 'Storage', 'soapatrickeight' ) ?></span>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>">Box</a></span>
+    <span class="breadcrumbs__item breadcrumbs__item--last">Storage</span>
   </nav>
 
   <header>
     <div class="marginal-icon marginal-icon--section">
       <?php soapatricknine_svg_icons('storage-dual'); ?>
     </div>         
-    <h1><?php esc_html_e( 'Storage', 'soapatrickeight' ) ?></h1>
+    <h1>Storage</h1>
   </header>
   <div class="site__content">
     <div class="storage-grid">

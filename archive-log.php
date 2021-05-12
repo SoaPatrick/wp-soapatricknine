@@ -10,7 +10,7 @@
 get_header(); ?>
 
   <nav aria-label="breadcrumb" class="breadcrumbs">
-    <span class="breadcrumbs__item"><a href="home.php">Home</a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
     <span class="breadcrumbs__item breadcrumbs__item--last">Log</span>
   </nav>
 
@@ -18,9 +18,12 @@ get_header(); ?>
     <div class="marginal-icon marginal-icon--section">
       <?php soapatricknine_svg_icons('git-dual'); ?>            
     </div>       
-    <h1><?php esc_html_e( 'Change Log', 'soapatricknine' ) ?></h1>
+    <h1>Changelog</h1>
   </header>
   <div class="site__content">
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+    </p>    
     <div class="changelog" data-infinite-scroll='{ "path": ".post-navigation__previous", "append": ".changelog__day", "history": false, "scrollThreshold": false, "button" : ".post-navigation__previous" }'>
       <?php
         if( have_posts() ) :

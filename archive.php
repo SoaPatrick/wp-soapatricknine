@@ -12,13 +12,12 @@ get_header();
   if ( have_posts() ) : ?>
 
     <nav aria-label="breadcrumb" class="breadcrumbs">
-      <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
+      <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
+      <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>">Box</a></span>
       <?php if( is_tag() ) : ?>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>"><?php esc_html_e( 'Box', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>/tags/"><?php esc_html_e( 'Tags', 'soapatricknine' ) ?></a></span>
+        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>/tags/">Tags</a></span>
       <?php else : ?>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php esc_html_e( 'Box', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>/storage/"><?php esc_html_e( 'Storage', 'soapatricknine' ) ?></a></span>
+        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>/storage/">Storage</a></span>
       <?php endif; ?>      
       <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_archive_title();?></span>
     </nav>  
@@ -35,7 +34,7 @@ get_header();
       ?>
     </div>
     <?php
-      soapatricknine_posts_navigation();
+    soapatricknine_posts_navigation();
 
   endif;
 

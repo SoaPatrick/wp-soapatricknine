@@ -9,6 +9,10 @@
 
 p {
   line-height: $line-height__base;
+
+  &.lead {
+    font-size: $font-size__h3;
+  }
 }
 
 h1,

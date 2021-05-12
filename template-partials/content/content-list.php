@@ -16,28 +16,14 @@ $postType = get_post_type();
   <header>
     <div class="marginal-icon<?php if (has_post_thumbnail() && $postType === 'post'): echo ' marginal-icon--image'; endif; ?>">
       <?php
-        if ($postType === 'factory') :
-          soapatricknine_svg_icons('factory');
-        elseif ($postType === 'lab') :
-          soapatricknine_svg_icons('lab');
-        else :
+        if ($postType === 'post') :
           if (has_post_thumbnail()) :
             the_post_thumbnail( 'thumbnail' );
           else :        
-            if ($format === 'quote') :
-              soapatricknine_svg_icons('quote');
-            elseif ($format === 'link') :
-              soapatricknine_svg_icons('link');
-            elseif ($format === 'image') :
-              soapatricknine_svg_icons('image');
-            elseif ($format === 'video') :
-              soapatricknine_svg_icons('video');
-            elseif ($format === 'status') :
-              soapatricknine_svg_icons('status');
-            else :
-              soapatricknine_svg_icons('pencil');
-            endif;
+            soapatricknine_svg_icons($format);
           endif;
+        else :
+          soapatricknine_svg_icons($postType);
         endif;
       ?>
     </div>    

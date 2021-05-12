@@ -22,7 +22,10 @@ $home_items = new WP_Query( $args );
   <header>
     <h1>SoaPatrick</h1>
   </header>
-  <div class="site__content">  
+  <div class="site__content">
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+    </p>    
 
     <?php
       if ($home_items->have_posts()) :

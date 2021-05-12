@@ -9,8 +9,8 @@
 
 get_header(); ?>
   <nav aria-label="breadcrumb" class="breadcrumbs">
-    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
-    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link( 'factory' ) ?>"><?php esc_html_e( 'Factory', 'soapatricknine' ) ?></a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link( 'factory' ) ?>">Factory</a></span>
     <span class="breadcrumbs__item breadcrumbs__item--last"><?php echo single_term_title(); ?></span>
   </nav>
 

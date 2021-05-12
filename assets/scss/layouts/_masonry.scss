@@ -6,6 +6,7 @@
   display:flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 2rem;
 
   @include mq(tiny) {
     flex-direction: row;

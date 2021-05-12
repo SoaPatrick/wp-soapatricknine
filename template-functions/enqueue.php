@@ -15,16 +15,13 @@ function soapatricknine_scripts() {
   } else {
     wp_enqueue_style( 'soapatricknine-style', get_template_directory_uri() . '/assets/css/app.css' );
   }
+  
   wp_enqueue_script( 'soapatricknine-scripts', get_template_directory_uri() . '/assets/js/scripts.js', '','' , true );
+  wp_enqueue_script( 'fslightbox-scripts', get_template_directory_uri() . '/assets/fslightbox/fslightbox.js', '','' , true );  
 
   if( is_post_type_archive('log') ) {
     wp_enqueue_script( 'infinite-scroll', 'https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js', '','' , true );
-  }
-
-
-    wp_enqueue_script( 'fslightbox-scripts', get_template_directory_uri() . '/assets/fslightbox/fslightbox.js', '','' , true );
-
- 
+  } 
 }
 add_action( 'wp_enqueue_scripts', 'soapatricknine_scripts' );
 

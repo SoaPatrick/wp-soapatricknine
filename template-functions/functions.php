@@ -26,16 +26,29 @@ function soapatricknine_allowed_block_types( $allowed_blocks ) {
 add_filter( 'allowed_block_types', 'soapatricknine_allowed_block_types' );
 
 /**
- * posted on functions for blog posts
+ * posted on functions for posts
  *
  */
 if ( ! function_exists( 'soapatricknine_posted_on' ) ) :
   function soapatricknine_posted_on() {
     $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
     $time_string = sprintf( $time_string, esc_attr( get_the_date( DATE_W3C ) ), esc_html( get_the_date() ) );
-    $posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
     echo  '<div>' . $time_string .' </div>'; // WPCS: XSS OK.
+  }
+endif;
+
+
+/**
+ * modified on functions for posts
+ *
+ */
+if ( ! function_exists( 'soapatricknine_modified_on' ) ) :
+  function soapatricknine_modified_on() {
+    $time_string = '<time class="entry-date modified" datetime="%1$s">%2$s</time>';
+    $time_string = sprintf( $time_string, esc_attr( get_the_modified_date( DATE_W3C ) ), esc_html( get_the_modified_date() ) );
+
+    echo  '<div>Last Update: ' . $time_string .' </div>'; // WPCS: XSS OK.
   }
 endif;
 
@@ -63,7 +76,7 @@ endif;
 
 
 /**
- * Edit link for blog posts and factory items
+ * Edit link
  *
  */
 if ( ! function_exists( 'soapatricknine_edit_post' ) ) :
@@ -120,6 +133,7 @@ function soapatricknine_next_posts_link_class() {
 function soapatricknine_previous_posts_link_class() {
   return 'class="post-navigation__next"';
 }
+
 
 /**
  * add classes to next and previous Post
@@ -187,6 +201,7 @@ function soapatricknine_iframe_wrapper($content) {
   return $content;
 }
 //add_filter('the_content', 'soapatricknine_iframe_wrapper');
+
 
 /**
  * Replace Youtube Videos with Preview Image instead
