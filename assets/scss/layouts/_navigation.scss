@@ -38,27 +38,41 @@
       outline-offset: -3px;
     }  
 
+
+
     @include mq(medium) {    
-      &:not(.navigation__link--sp):before {
-        content: "Soap";
-        color: var(--color__link--primary);
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out;
-      }
-
-      &:not(.navigation__link--sp):hover {
-        left: -1rem;
-        padding-left: 2.35rem;
-        color: var(--color__link--secondary);
-
+      &--hover {
         &:before {
-          transition: opacity 0.25s ease-in-out;
-          opacity: 1;
+          content: "Soap";
+          color: var(--color__link--primary);
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.2s ease-in-out;
         }
-      } 
+
+        &__short:before {
+          content: "Soa";
+        } 
+      }   
+
+      &--hover {
+        &:hover {
+          left: -1rem;
+          padding-left: 2.35rem;
+          color: var(--color__link--secondary);
+
+          &:before {
+            transition: opacity 0.25s ease-in-out;
+            opacity: 1;
+          }
+        }
+        
+        &__short:hover {
+          padding-left: 1.8rem;
+        }          
+      }
     }     
 
     svg {

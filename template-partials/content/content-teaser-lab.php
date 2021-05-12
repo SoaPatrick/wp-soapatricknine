@@ -9,14 +9,14 @@
 
 ?>            
             
-            
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php if(get_field('is_video')) : ?>
-    <a data-fslightbox="video" href="<?php the_field('video'); ?>" aria-label="<?php the_title() ?>">
-  <?php else: ?>
-    <a data-fslightbox href="<?php echo get_the_post_thumbnail_url(get_the_ID(),'large'); ?>" aria-label="<?php the_title() ?>">
-  <?php endif; 
-    the_post_thumbnail( 'medium');
+<a aria-label="<?php the_title(); ?>"
+  <?php 
+    if(get_field('is_video')) : 
+      echo 'data-fslightbox="video" href="'. get_field('video') .'"';
+    else : 
+      echo 'data-fslightbox href="'. get_the_post_thumbnail_url(get_the_ID(),'large') .'"';
+    endif ;
   ?>
-  </a>
-</article>
+>
+  <?php the_post_thumbnail('medium'); ?>
+</a>

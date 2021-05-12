@@ -40,8 +40,23 @@
 
       img {
         display: block;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
     }
+  }
+
+  &__rating {
+    position: relative;
+    z-index: 100;
+    background: var(--color__highlight);
+    color: $color__white;
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 0 0 .25rem 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;    
   }
 
   &__more {

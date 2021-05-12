@@ -31,7 +31,11 @@ get_header(); ?>
       <?php
         if ( have_posts() ) :
           while ( have_posts() ) : the_post();
-            get_template_part( 'template-partials/content/content', 'teaser-lab' );
+            ?>
+              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
+              </article>
+            <?php
           endwhile;
         endif;
       ?>

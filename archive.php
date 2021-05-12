@@ -23,7 +23,7 @@ get_header();
       <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_archive_title();?></span>
     </nav>  
 
-    <header>
+    <header>   
       <?php the_archive_title( '<h1>', '</h1>' ); ?>
     </header>
     <div class="site__content">

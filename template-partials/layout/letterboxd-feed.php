@@ -51,10 +51,10 @@
           $rating = $titleParts[$titlePartsLength - 1];
           ?>
             <div class="letterboxd-rss__item">
-              <a href="<?php echo $permalink; ?>" target="_blank" rel="noreferrer" aria-label="<?php echo $title; ?>">
+              <a href="<?php echo $permalink; ?>" class="img-link" target="_blank" rel="noreferrer" aria-label="<?php echo $title; ?>">
                 <div class="letterboxd-rss__description"><?php echo $description; ?></div>
+                <span class="letterboxd-rss__rating"><?php echo $rating; ?></span>                
               </a>
-              <span class="letterboxd-rss__rating"><?php echo $rating; ?></span>
             </div>
           <?php 
         }

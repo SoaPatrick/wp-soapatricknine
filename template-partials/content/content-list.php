@@ -54,14 +54,7 @@ $postType = get_post_type();
         if($postType === 'lab') : 
           ?>
             <figure class="wp-block-image">
-              <?php if(get_field('is_video')) : ?>
-                <a data-fslightbox="video" href="<?php the_field('video'); ?>" aria-label="<?php the_title() ?>" class="video-link">
-              <?php else: ?>
-                <a data-fslightbox href="<?php echo get_the_post_thumbnail_url(get_the_ID(),'large'); ?>" aria-label="<?php the_title() ?>">
-              <?php endif; 
-                the_post_thumbnail( 'medium');
-              ?>         
-                </a>
+                <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
                 <figcaption>
                   <?php the_post_thumbnail_caption(); ?>
                 </figcaption>                     
