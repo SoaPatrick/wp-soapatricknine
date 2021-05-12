@@ -23,7 +23,7 @@ function soapatricknine_allowed_block_types( $allowed_blocks ) {
     'core-embed/youtube',
   );
 }
-//add_filter( 'allowed_block_types', 'soapatricknine_allowed_block_types' );
+add_filter( 'allowed_block_types', 'soapatricknine_allowed_block_types' );
 
 /**
  * posted on functions for blog posts

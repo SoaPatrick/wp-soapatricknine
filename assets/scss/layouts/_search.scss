@@ -33,11 +33,22 @@
     font-weight: 400;
     color: var(--color__text);
 
-    &::-webkit-input-placeholde,
+    &::-webkit-input-placeholder {
+      color: var(--color__text);
+      font-weight: $font-weight__light;
+      opacity: .35;
+    }
+
     &::-moz-placeholder {
       color: var(--color__text);
       font-weight: $font-weight__light;
       opacity: .35;
     }
+
+    &:-ms-input-placeholder {
+      color: var(--color__text);
+      font-weight: $font-weight__light;
+      opacity: .35;
+    }    
   }    
 }  

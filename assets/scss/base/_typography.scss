@@ -42,11 +42,56 @@ a {
     outline: 3px dotted var(--color__link--primary);
   }    
 
-  &.img-link {
+  &[data-fslightbox] {
     display: block;
     padding: 0;
     border: 0;
+    position: relative;   
+    
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;                 
+    }
+
+    &:hover {
+      &:before {
+        z-index: 10;
+        background: var(--color__highlight);
+        border-radius: 5px;
+        opacity: .5;
+      }
+
+      &:after {
+        z-index: 11;     
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M319.8 204v8c0 6.6-5.4 12-12 12h-84v84c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-84h-84c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h84v-84c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v84h84c6.6 0 12 5.4 12 12zm188.5 293L497 508.3c-4.7 4.7-12.3 4.7-17 0l-129-129c-2.3-2.3-3.5-5.3-3.5-8.5v-8.5C310.6 395.7 261.7 416 208 416 93.8 416 1.5 324.9 0 210.7-1.5 93.7 93.7-1.5 210.7 0 324.9 1.5 416 93.8 416 208c0 53.7-20.3 102.6-53.7 139.5h8.5c3.2 0 6.2 1.3 8.5 3.5l129 129c4.7 4.7 4.7 12.3 0 17zM384 208c0-97.3-78.7-176-176-176S32 110.7 32 208s78.7 176 176 176 176-78.7 176-176z"></path></svg>');
+        background-size: 2rem 2rem;
+        background-position: center center;
+        background-repeat: no-repeat;        
+      }
+    }
   }
+
+  &[data-fslightbox="video"]:before {     
+    z-index: 1;     
+    background: transparent;
+    //background: linear-gradient(315deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 4rem);
+    background: linear-gradient(315deg, var(--color__highlight) 0rem, var(--color__highlight) 2.5rem, transparent 2.5rem);
+    border-radius: 5px;
+
+  }    
+
+  &[data-fslightbox="video"]:after {     
+    z-index: 2;     
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="white" d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"></path></svg>');
+    background-size: 1rem 1rem;
+    background-position: calc(100% - .5rem) calc(100% - .5rem);
+    background-repeat: no-repeat;        
+  }  
 }
 
 /*

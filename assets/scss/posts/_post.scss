@@ -33,7 +33,6 @@
       position: relative;
 
       a {
-        @extend .img-link;
         position: absolute;
         padding: 2px;
       }
@@ -111,22 +110,5 @@
         line-height: 1.4;
       }
     }   
-  }
-}
-
-.lab {
-  .video-link {
-    position: relative;
-
-    &__icon {
-      position: absolute;
-      bottom: .25rem;
-      right: .5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      z-index: 1;
-      fill: $color__white;
-      box-shadow: none !important;
-    }
   }
 }
