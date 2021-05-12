@@ -11,40 +11,18 @@
 $format = get_post_format();
 
 ?>
-
   <nav class="breadcrumbs">
-    <?php if(is_front_page()): ?>
-    <?php elseif(is_page()): ?>
-      <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
-      <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_title() ?></span>
-    <?php else: ?>
-      <?php if (is_single() ): ?>
-        <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php esc_html_e( 'Box', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>/storage/"><?php esc_html_e( 'Storage', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item"><a href="<?php echo get_month_link(get_the_date('Y'), get_the_date('m')); ?>"><?php echo get_the_date('F Y'); ?></a></span>
-        <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_title() ?></span>
-      <?php else: ?>
-        <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'SoaPatrick', 'soapatricknine' ) ?></a></span>
-        <span class="breadcrumbs__item breadcrumbs__item--last"><?php esc_html_e( 'Box', 'soapatricknine' ) ?></span>
-      <?php endif; ?>
-    <?php endif; ?>
+    <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'soapatricknine' ) ?></a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php esc_html_e( 'Box', 'soapatricknine' ) ?></a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>/storage/"><?php esc_html_e( 'Storage', 'soapatricknine' ) ?></a></span>
+    <span class="breadcrumbs__item"><a href="<?php echo get_month_link(get_the_date('Y'), get_the_date('m')); ?>"><?php echo get_the_date('F Y'); ?></a></span>
+    <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_title() ?></span>
   </nav>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class('post post--single'); ?>>
     <header>
       <div class="marginal-icon">
-        <?php
-          if($format === 'status') :
-            soapatricknine_svg_icons('status');
-          elseif ($format === 'quote') :
-            soapatricknine_svg_icons('quote');
-          elseif ($format === 'link') :
-            soapatricknine_svg_icons('link');
-          else:
-            soapatricknine_svg_icons('pencil');
-          endif ;
-        ?>
+        <?php soapatricknine_svg_icons($format); ?>
       </div>      
       <div class="post__meta">
         <?php
@@ -60,14 +38,11 @@ $format = get_post_format();
         endif;
       ?>
     </header>
-
-    <div class="post__content">
-      <?php 
-        if(!$format):
-          the_content(); 
-        endif;
-      ?>
-    </div>
+    <?php if(!$format): ?>
+      <div class="post__content">
+        <?php the_content(); ?>
+      </div>
+    <?php endif; ?>
 
     <footer>
       <?php soapatricknine_tags(); ?>
