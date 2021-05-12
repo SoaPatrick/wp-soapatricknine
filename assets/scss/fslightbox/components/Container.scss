@@ -1,0 +1,17 @@
+.fslightbox-container {
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .95);
+  z-index: 1000000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  * {
+    box-sizing: border-box;
+  }
+}

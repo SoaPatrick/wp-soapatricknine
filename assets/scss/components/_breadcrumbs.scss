@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #Breadcrumbs
+\*------------------------------------*/
+
+.breadcrumbs {
+  font-size: $font-size__small;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    white-space: nowrap;
+    margin: .25rem 0;
+
+    &::after {
+      content: "/";
+      padding: 0 0.5em;
+      font-weight: bold;
+      opacity: 0.25;
+    }
+
+    &--last::after {
+      content: none;
+    }
+  }
+}

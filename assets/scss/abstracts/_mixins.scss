@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  #Mixins
+\*------------------------------------*/
+
+// mixin for media queries
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+// Reset Browser default list styling
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

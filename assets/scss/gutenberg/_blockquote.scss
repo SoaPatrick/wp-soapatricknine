@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  #Blockquote
+\*------------------------------------*/
+
+blockquote {
+  margin: 2rem 0;
+  padding: 0 1rem;
+  border-left: 5px solid var(--color__highlight);
+
+  p {
+    font-weight: $font-weight__light;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  &.is-style-large {
+    padding: 0 2rem;
+
+    p {
+      font-size: $font-size__h3;
+      font-weight: $font-weight__regular;      
+      line-height: 1.4;
+    }
+  }
+
+  cite {
+    display: block;
+  }
+
+  cite,
+  cite em {
+    font-size: $font-size__small;
+    font-weight: $font-weight__light;
+  }
+}

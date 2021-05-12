@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+#Reset
+--------------------------------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button,
+select,
+textarea,
+input {
+  font-size: $font-size-_base;
+  font-family: $font-family__base;
+  font-weight: $font-weight__light;
+}
+
+input,
+textarea {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+  }  
+}
+
+button {
+  text-rendering: auto;
+  color: inherit;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;   
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

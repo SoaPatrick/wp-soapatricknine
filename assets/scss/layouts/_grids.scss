@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  #Grids
+\*------------------------------------*/
+
+.four-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2,1fr);
+
+  img {
+    border-radius: 5px;    
+  }
+
+  @include mq(small) {
+    grid-template-columns: repeat(4,1fr);
+  }
+}

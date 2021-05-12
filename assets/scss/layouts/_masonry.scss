@@ -1,0 +1,54 @@
+/*------------------------------------*\
+  #Masonry Grid
+\*------------------------------------*/
+
+.masonry-grid {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include mq(tiny) {
+    flex-direction: row;
+  }
+
+  article {
+    margin-bottom: 1rem;
+
+    @include mq(tiny) {    
+      margin-right: 1rem;
+    }
+  }
+
+  img {
+    display: block;
+    border-radius: 5px;
+
+    @include mq(tiny) {
+      height: clamp(150px,10vw,300px);
+      width: auto;
+    }
+  }  
+
+  @supports (grid-template-rows: masonry) {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: masonry;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    @include mq(small) {
+      grid-template-columns: repeat(auto-fill,minmax(265px,1fr));
+    }    
+
+    @include mq(large) {
+      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    }        
+
+    article {
+      margin: 0;
+    }
+    
+    img {
+      height: auto;
+    }    
+  }
+}

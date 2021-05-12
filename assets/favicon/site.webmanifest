@@ -1,0 +1,20 @@
+{
+    "name": "SoaPatrick",
+    "short_name": "SoaPatrick",
+    "icons": [
+        {
+            "src": "/wp-content/themes/soapatrickeight/assets/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/wp-content/themes/soapatrickeight/assets/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#222222",
+    "background_color": "#222222",
+    "start_url": "https://www.soapatrick.com",
+    "display": "standalone"
+}

@@ -1,0 +1,51 @@
+{
+    "key": "group_5e5424b44352c",
+    "title": "Change Log",
+    "fields": [
+        {
+            "key": "field_5ad8c6dfbfa48",
+            "label": "Changelog Type",
+            "name": "changelog_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "added": "Added",
+                "removed": "Removed",
+                "changed": "Changed",
+                "fixed": "Fixed"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "log"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600977702
+}

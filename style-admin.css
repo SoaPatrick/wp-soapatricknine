@@ -1,0 +1,8 @@
+.menu-icon-factory .svg {
+  background-size: 16px !important;
+}
+
+.menu-icon-lab .svg,
+.menu-icon-log .svg {
+  background-size: 14px !important;
+}

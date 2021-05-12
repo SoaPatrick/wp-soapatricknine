@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  #Columns
+\*------------------------------------*/
+
+.wp-block-columns {
+
+  @include mq(medium) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wp-block-column {
+    margin: 0;
+  }
+}

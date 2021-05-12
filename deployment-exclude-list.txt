@@ -1,0 +1,7 @@
+.*
+.git/*
+.bitbucket/*
+scss/
+*.yml
+*.txt
+gulpfile.js

@@ -1,0 +1,8 @@
+/*------------------------------------*\
+  #Functions
+\*------------------------------------*/
+
+// z-index map function
+@function z($key) {
+  @return map-get($z-index, $key);
+}

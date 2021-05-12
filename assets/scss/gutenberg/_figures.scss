@@ -1,0 +1,125 @@
+/*------------------------------------*\
+  #Figures
+\*------------------------------------*/
+
+figure {
+  margin: 0;
+}
+
+.wp-block-image { 
+  margin: 2rem 0;
+
+  * {
+    clear: both;
+  }
+
+  a {
+    padding: 0;
+
+    &:hover {
+      border: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 5px;    
+  }
+
+  figcaption {
+    font-size: $font-size__small;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-style: italic;
+    color: inherit;
+  }  
+
+
+  &.alignfull {
+    @include mq(tiny) {
+      max-width: calc(#{$alignwide} + #{$marginal-width});
+      margin-left: calc(#{$marginal-width} * -1);
+    }
+
+    @include mq(medium) {      
+      max-width: calc(#{$alignwide} + #{$marginal-width--medium});
+      margin-left: calc(#{$marginal-width--medium} * -1);
+    }
+
+    figcaption {
+      @include mq(tiny) {
+        margin-left: #{$marginal-width};
+      }        
+
+      @include mq(medium) {
+        margin-left: #{$marginal-width--medium};
+      }
+    }
+  }
+
+  .aligncenter {
+    float: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+  }  
+
+
+  .alignleft,
+  .alignright {
+    width: auto;
+    margin-top: .35rem;
+    margin-bottom: 1rem;
+
+
+    &.sizr-medium,
+    &.size-large {
+      max-width: calc(40% - .5rem);
+    }
+
+    &.size-thumbnail {
+      max-width: calc(20% - .5rem);
+    }      
+
+    @include mq(small) {
+      &.sizr-medium,
+      &.size-large {
+        max-width: calc(50% - .5rem);
+      }
+
+      &.size-thumbnail {
+        max-width: calc(25% - .5rem);
+      }  
+    }
+
+    figcaption {
+      margin-bottom: 0;
+    }
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: 1rem;
+  }      
+}
+
+
+// Video
+.wp-block-video {
+  video {
+    display: block;
+    max-width: 100%;
+  }
+}

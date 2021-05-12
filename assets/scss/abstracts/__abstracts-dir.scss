@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+#Abstracts
+--------------------------------------------------------------*/
+
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helper functions and non–output snippets only
+(font-face imports, reusable mixins, global variables, colors, etc.)
+*/
+
+//Import Abstracts files
+@import "fonts";
+@import "mixins";
+@import "functions";
+@import "variables";

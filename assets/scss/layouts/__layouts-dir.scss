@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+#Layouts
+--------------------------------------------------------------*/
+
+/*
+This file is used to contain all layout imports.
+Files inside this folder can contain specific element styles and layout.
+Unique combinations of layouts and base styles are imported here
+*/
+
+//Import Layout files
+@import "footer";
+@import "grids";
+@import "masonry";
+@import "navigation";
+@import "search";
+@import "tiles";
+@import "wrapper";

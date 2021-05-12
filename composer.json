@@ -1,0 +1,21 @@
+{
+    "name": "soapatrick/soapatrickeight-plugins",
+    "description": "composer file to install Wordpress Plugins",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "../../plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    },
+    "require": {
+        "wpackagist-plugin/wp-migrate-db": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*"
+    }
+}

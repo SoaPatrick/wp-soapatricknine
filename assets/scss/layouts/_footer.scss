@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  #Footer
+\*------------------------------------*/
+
+.global-footer {
+  font-size: $font-size__small;
+  margin-top: 4rem;
+  
+  p {
+    margin: 0 0 2.1rem;
+
+    @include mq(medium) {
+      margin-bottom: 2.3rem;
+    }
+  }
+}

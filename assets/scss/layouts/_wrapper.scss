@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Wrapper
+\*------------------------------------*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin-right: var(--margin__body);
+  margin-left: calc(var(--margin__body) + var(--width__navbar) + 2 * var(--margin__body));  
+
+  @include mq(tiny) {
+    padding-left: $marginal-width; 
+  }
+
+  @include mq(medium) {
+    padding-left: $marginal-width--medium;     
+    margin-right: var(--margin__body);
+    margin-left: calc(var(--margin__body) + var(--width__navbar) + var(--margin__body));    
+  }
+
+  .global-main {
+    flex: 1;
+  }
+}
+
+.global-header {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+
+  @include mq(medium) {
+    bottom: 2rem;
+    left: 2rem;    
+  }     
+}

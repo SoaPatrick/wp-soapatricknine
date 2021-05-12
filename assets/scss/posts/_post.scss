@@ -1,0 +1,132 @@
+/*------------------------------------*\
+  #Post
+\*------------------------------------*/
+
+.post {
+  position: relative;
+  margin: 4rem 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  header,
+  footer {
+    max-width: $aligncontent;
+  }
+
+  &__content {
+    > * {
+      max-width: $aligncontent;
+    }
+  }
+
+  &__meta {
+    font-size: $font-size__smaller;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .7;
+    display: flex;
+
+    .edit {
+      margin-left: .5rem;
+      position: relative;
+
+      a {
+        @extend .img-link;
+        position: absolute;
+        padding: 2px;
+      }
+
+      svg {
+        width: 1.1em;
+        height: 1.1em;
+      }
+    }    
+  }
+
+  h1 {
+    margin: .5rem 0 2rem;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  &--list {
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: .5rem;
+      
+      a {
+        color: var(--color__text);
+        border: 0;
+        padding: 0;   
+        
+        &:hover {
+          color: var(--color__text);
+          border: 0;        
+          text-decoration: none;
+          background-repeat: no-repeat;
+          background-size: 100% 2px;
+          background-position: center bottom 15%;
+          background-origin: padding-box;
+          text-shadow: 1px 2px var(--color__body), 2px 2px var(--color__body), 3px 2px var(--color__body), -1px 2px var(--color__body), -2px 2px var(--color__body), -3px 2px var(--color__body);
+          background-image: linear-gradient(var(--color__text), var(--color__text));     
+        }
+      }      
+    }
+
+    header,
+    footer {
+      max-width: $aligncontent;
+
+      figure {
+        margin: .5rem 0;
+      }
+    }
+
+    .post__content {
+      > * {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+.post--list,
+.post--single {
+  &.post_format-post {
+    &-format-quote {
+      blockquote {
+        margin: 1rem 0;
+        p {
+          font-size: $font-size__h2;
+          line-height: 1.4; 
+        }
+      }
+    }
+
+    &-format-status {
+      p {
+        margin: .5rem 0;
+        font-size: $font-size__h2;
+        line-height: 1.4;
+      }
+    }   
+  }
+}
+
+.lab {
+  .video-link {
+    position: relative;
+
+    &__icon {
+      position: absolute;
+      bottom: .25rem;
+      right: .5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      z-index: 1;
+      fill: $color__white;
+      box-shadow: none !important;
+    }
+  }
+}

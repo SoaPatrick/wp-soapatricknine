@@ -1,0 +1,158 @@
+/*------------------------------------*\
+  #Imports
+\*------------------------------------*/
+
+//Abstracts
+@import "abstracts/__abstracts-dir";
+
+//Base
+@import "base/__base-dir";
+
+//Layouts
+@import "layouts/__layouts-dir";
+
+//Posts
+@import "components/__components-dir";
+
+//Posts
+@import "posts/__posts-dir";
+
+//Gutenberg
+@import "gutenberg/__gutenberg-dir";
+
+//Lightbox
+@import "fslightbox/__fslightbox-dir";
+
+
+
+/*------------------------------------*\
+  #RSS Feed
+\*------------------------------------*/
+
+.letterboxd-rss {
+  &__description {
+    p {
+      margin: 0;
+
+      &:last-child {
+        display: none;
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &__more {
+    text-align: right;
+    margin-top: .5rem;
+  }
+}
+
+/*------------------------------------*\
+  #Storage Grid
+\*------------------------------------*/
+
+.storage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  gap: 2rem 1rem;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    a {
+      padding: .15rem 0;
+    }
+  }
+}
+
+/*------------------------------------*\
+  #Section/Site
+\*------------------------------------*/
+
+.section,
+.site {
+  > header {
+    position: relative;
+    margin-top: 4rem;
+    max-width: $aligncontent;
+
+    h1 {
+      margin-top: 0;      
+      font-size: clamp(2rem, 10vw, 3rem);     
+    }
+  }
+
+  &__content {
+    > p,
+    > form,
+    > .widget {
+      max-width: $aligncontent;
+    }
+  }
+}
+
+.section {
+  margin: 5rem 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/*------------------------------------*\
+  #Box Sub-Navigation
+\*------------------------------------*/
+
+.sub-navigation {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: $font-family__heading;
+
+  a {
+    margin: .25rem 0;
+  }
+}
+
+
+.alignwide {
+  max-width: $alignwide;
+}
+
+.alignfull {
+  max-width: $alignfull;
+}
+
+
+
+
+.wp-block-embed-youtube,
+.wp-block-embed-vimeo {
+  margin: 2rem 0;
+    
+  .wp-block-embed__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+
+    iframe,
+    object,
+    embed,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

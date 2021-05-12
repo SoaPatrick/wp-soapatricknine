@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #Post navigation
+\*------------------------------------*/
+
+.post-navigation {
+  margin-top: 4rem;
+  display: inline-grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "older newer";
+  font-family: "Recoleta", serif;
+  max-width: $aligncontent;
+
+  a {
+    display: inline;
+    
+    &:first-child {
+      justify-self: start;
+      grid-area: newer;      
+    }
+
+    &:last-child {
+      justify-self: end;
+      grid-area: older;      
+    }
+  }
+}

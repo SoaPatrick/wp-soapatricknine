@@ -1,0 +1,101 @@
+/*------------------------------------*\
+  #Galleries
+\*------------------------------------*/
+.wp-block-gallery {
+  margin: 3rem 0;
+
+  &.alignfull {
+    @include mq(tiny) {
+      max-width: calc(#{$alignwide} + #{$marginal-width});
+      margin-left: calc(#{$marginal-width} * -1);
+    }
+
+    @include mq(medium) {      
+      max-width: calc(#{$alignwide} + #{$marginal-width--medium});
+      margin-left: calc(#{$marginal-width--medium} * -1);
+    }
+  }  
+
+  .blocks-gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    @include list-reset();
+
+    li::before {
+      content: none;
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      padding: 1rem;
+      color: $color__white;
+      text-align: center;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.3) 70%,
+        transparent
+      );
+
+      img {
+        display: inline;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .blocks-gallery-item {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;      
+
+      @include mq(small) {
+        width: calc(100% - 1rem / 2);
+        margin: 0 1rem 1rem 0;
+      }
+    }
+  }
+
+  &.is-cropped {
+    .blocks-gallery-item a,
+    .blocks-gallery-item img {
+      height: 100%;
+      flex: 1;
+      object-fit: cover;
+    }
+  }
+
+  @include mq(small) {
+    &.columns-1 .blocks-gallery-item {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @for $i from 2 to 8 {
+      $factor: $i - 1;
+      &.columns-#{$i} .blocks-gallery-item {
+        width: calc((100% - 1rem * #{$factor}) /#{$i});
+        margin-right: 1rem;
+      }
+
+      &.columns-#{$i} .blocks-gallery-item:nth-of-type(#{$i}n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .blocks-gallery-item:last-child {
+    margin-right: 0;
+  }
+}

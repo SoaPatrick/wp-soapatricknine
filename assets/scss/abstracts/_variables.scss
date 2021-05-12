@@ -1,0 +1,131 @@
+// Colors
+$color__white: #ffffff;
+$color__black: #000000;
+$color__gray: #666666;
+$color__gray--dark: #222222;
+$color__gray--darker: #1c1c1c;
+$color__gray--light: #eeeeee;
+
+$color__red: #cf3a3a;
+$color__pink: #ec407a;
+
+// Font-Family
+$font-family__base: "Lato", sans-serif;
+$font-family__heading: "Recoleta", serif;
+$font-family__code: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono",
+  "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+  "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New",
+  Courier, monospace;
+
+
+  // Font-Sizes
+$font-size__base: clamp(18px, 3vw, 22px);
+$font-size__h1: 2.2rem;
+$font-size__h2: 1.5rem;
+$font-size__h3: 1.2rem;
+$font-size__h4: 1rem;
+$font-size__small: 0.8rem;
+$font-size__smaller: 0.65rem;
+$font-size__large: clamp(2.2rem, 10vw, 3rem);
+
+// Font Line-Height
+$line-height__base: 1.5;
+$line-height__heading: 1.1;
+
+// Font-Weight:
+$font-weight__light: 300;
+$font-weight__regular: 400;
+$font-weight__bold: 600;
+
+
+$aligncontent: 750px;
+$alignwide: 1200px;
+$alignfull: 100%;
+
+$marginal-base: clamp(2rem, 7vw, 5rem);
+
+$marginal-width: calc(#{$marginal-base} + 1rem);
+$marginal-width--medium: calc(#{$marginal-base} + 2rem);
+
+
+
+// Z-Indices
+// z-index: z(navbar);
+$z-index: (
+  navbar: 900,
+);
+
+// bp(sm-min)
+$breakpoints: (
+  tiny : 481px,  
+  small : 768px,
+  medium : 992px,
+  large : 1400px,
+);
+
+:root {
+  --color__body: #{$color__white};
+  --color__text: #{$color__gray--dark};  
+  --color__highlight: #{$color__red};
+  --color__search--bg: #{$color__red};
+
+
+  --color__link: #{$color__red};
+  --color__link--primary: #{$color__red};
+  --color__link--secondary: #{$color__gray--dark};  
+
+  --width__navbar: 1rem;
+  --margin__body: 1rem;
+
+  @include mq(medium) {
+    --width__navbar: 100px;
+    --margin__body: 2rem;    
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color__text: #{$color__white};
+//     --color__body: #{$color__gray--dark};  
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --color__body: #{$color__white};
+//     --color__text: #{$color__gray--dark};  
+//   }
+// }
+
+[data-theme="black"] {
+  --color__text: #{$color__white};
+  --color__body: #{$color__black};
+  --color__highlight: #{$color__gray}; 
+  --color__search--bg: #{$color__gray};  
+  
+  --color__link: #{$color__gray};
+  --color__link--primary: #{$color__gray};
+  --color__link--secondary: #{$color__white};      
+}
+
+[data-theme="red"] {
+  --color__text: #{$color__white};
+  --color__highlight: #{$color__white};  
+  --color__body: #{$color__red};
+  --color__search--bg: #{$color__gray--darker};    
+
+  --color__link: #{$color__gray--dark};
+  --color__link--primary: #{$color__white};
+  --color__link--secondary: #{$color__gray--dark};      
+}
+
+[data-theme="darkpink"] {
+  --color__text: #{$color__white};
+  --color__body: #{$color__gray--dark};  
+  --color__highlight: #{$color__pink};
+  --color__search--bg: #{$color__pink}; 
+  
+  --color__link: #{$color__pink};
+  --color__link--primary: #{$color__pink};
+  --color__link--secondary: #{$color__white};    
+}

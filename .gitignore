@@ -1,0 +1,19 @@
+# damn mac folder files
+.DS_Store
+
+# Config Files
+config.codekit3
+*.code-workspace
+
+# css file gets compiled with deployment process
+*.css
+!style.css
+!style-admin.css
+
+# localy generated files by running node
+package-lock.json
+node_modules/*
+
+# Composer stuff
+composer.lock
+vendor/*

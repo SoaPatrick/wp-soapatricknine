@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #Search
+\*------------------------------------*/
+
+.global-search {
+  background: var(--color__search--bg);
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;    
+  max-height: 0;
+  
+  &.open {
+    max-height: 800px;
+  }
+
+  .search-form {
+    padding: 4rem 1rem;    
+
+    @include mq(medium) {
+      padding: 4rem 2rem;    
+    }
+  }
+}
+
+.search-form {
+  padding: 2rem 0;
+
+  input {
+    width: 100%;
+    background: rgba($color__black,.1);
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    padding: .75rem 1.5rem;
+    font-weight: 400;
+    color: var(--color__text);
+
+    &::-webkit-input-placeholde,
+    &::-moz-placeholder {
+      color: var(--color__text);
+      font-weight: $font-weight__light;
+      opacity: .35;
+    }
+  }    
+}  

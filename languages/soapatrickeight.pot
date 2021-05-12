@@ -1,0 +1,370 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: soapatrickeight\n"
+"POT-Creation-Date: 2020-07-06 08:59+0200\n"
+"PO-Revision-Date: 2020-03-21 12:57+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#. Author of the plugin/theme
+#: archive-factory.php:15 archive.php:16 taxonomy-factory_tags.php:15
+#: template-pages/storage-page.php:16 template-pages/tags-page.php:16
+#: template-partials/content/content-single-factory.php:16
+msgid "SoaPatrick"
+msgstr ""
+
+#: archive-factory.php:16 archive-factory.php:21 taxonomy-factory_tags.php:16
+#: template-partials/content/content-single-factory.php:17
+#: template-partials/layout/navigation.php:25
+#: template-partials/layout/navigation.php:26
+#: template-types/cpt/cpt-factory.php:15 template-types/cpt/cpt-factory.php:22
+msgid "Factory"
+msgstr ""
+
+#: archive-log.php:14
+msgid "Change Log"
+msgstr ""
+
+#: archive.php:18 template-pages/tags-page.php:17
+#: template-pages/tags-page.php:22
+msgid "Tags"
+msgstr ""
+
+#: archive.php:20 template-pages/storage-page.php:17
+#: template-pages/storage-page.php:22
+#: template-partials/layout/navigation.php:18
+#: template-partials/layout/navigation.php:19
+msgid "Storage"
+msgstr ""
+
+#: footer.php:18
+#, php-format
+msgid "Stuff from 2000 to %s by SoaPatrick/<a href=\"%s\">Seven</a>"
+msgstr ""
+
+#: footer.php:21 footer.php:22
+msgid "Data Protection"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search: %s"
+msgstr ""
+
+#: searchform.php:12
+msgid "Find Stuff..."
+msgstr ""
+
+#: template-functions/functions.php:73
+msgid "Edit"
+msgstr ""
+
+#: template-functions/functions.php:85
+msgid "Next Post"
+msgstr ""
+
+#: template-functions/functions.php:86
+msgid "Previous Post"
+msgstr ""
+
+#: template-functions/functions.php:100
+msgid "Next Posts"
+msgstr ""
+
+#: template-functions/functions.php:100
+msgid "Previous Posts"
+msgstr ""
+
+#: template-functions/functions.php:103
+msgid "Next Items"
+msgstr ""
+
+#: template-functions/functions.php:103
+msgid "Previous Items"
+msgstr ""
+
+#: template-functions/functions.php:106
+msgid "Load More"
+msgstr ""
+
+#: template-partials/content/content-factory_feed.php:14
+msgid "Factory Feed"
+msgstr ""
+
+#: template-partials/content/content-factory_feed.php:32
+#, php-format
+msgid "The rest can be seen <a href=\"%s\">in the Factory</a>."
+msgstr ""
+
+#: template-partials/content/content-none.php:17
+msgid "I found nothing!"
+msgstr ""
+
+#: template-partials/content/content-none.php:19
+msgid "Something went wrong!"
+msgstr ""
+
+#: template-partials/content/content-none.php:29
+msgid ""
+"Sorry, but I can&rsquo;t find what you&rsquo;re looking for. Please try "
+"again with other words."
+msgstr ""
+
+#: template-partials/content/content-none.php:31
+msgid ""
+"It seems I can&rsquo;t find what you&rsquo;re looking for. Try finding it?"
+msgstr ""
+
+#: template-partials/content/content-related-factory.php:29
+msgid "Related Factory Items"
+msgstr ""
+
+#: template-partials/content/content-related.php:29
+msgid "Related Blog Posts"
+msgstr ""
+
+#: template-partials/layout/navigation.php:32
+#: template-partials/layout/navigation.php:33
+#: template-partials/layout/settings.php:16
+msgid "Settings"
+msgstr ""
+
+#: template-partials/layout/navigation.php:39
+#: template-partials/layout/navigation.php:40
+msgid "Find Stuff"
+msgstr ""
+
+#: template-partials/layout/settings.php:13
+msgid "Close Settings"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:13
+msgctxt "Post Type General Name"
+msgid "Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:14
+msgctxt "Post Type Singular Name"
+msgid "Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:16
+msgid "Factory Item"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:17
+msgid "View Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:18
+msgid "View Factory Item"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:19
+msgid "Search Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:23
+msgid "Factory Items"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:13
+msgctxt "Post Type General Name"
+msgid "Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:14
+msgctxt "Post Type Singular Name"
+msgid "Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:15 template-types/cpt/cpt-log.php:18
+msgid "Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:19
+msgid "Changelogs"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:13
+msgctxt "Taxonomy General Name"
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:14
+msgctxt "Taxonomy Singular Name"
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:15
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:16
+msgid "All Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:17
+msgid "Parent Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:18
+msgid "Parent Factory Tag:"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:19
+msgid "New Factory Tag Name"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:20
+msgid "Add New Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:21
+msgid "Edit Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:22
+msgid "Update Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:23
+msgid "View Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:24
+msgid "Separate Factory Tags with commas"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:25
+msgid "Add or remove Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:26
+#: template-types/tax/tax-post_experiments.php:26
+msgid "Choose from the most used"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:27
+msgid "Popular Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:28
+msgid "Search Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:29
+#: template-types/tax/tax-post_experiments.php:29
+msgid "Not Found"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:30
+msgid "No Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:31
+msgid "Factory Tags list"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:32
+msgid "Factory Tags list navigation"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:13
+msgctxt "Taxonomy General Name"
+msgid "Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:14
+msgctxt "Taxonomy Singular Name"
+msgid "Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:15
+msgid "Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:16
+msgid "All Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:17
+msgid "Parent Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:18
+msgid "Parent Project:"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:19
+msgid "New Project Name"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:20
+msgid "Add New Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:21
+msgid "Edit Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:22
+msgid "Update Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:23
+msgid "View Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:24
+msgid "Separate Projects with commas"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:25
+msgid "Add or remove Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:27
+msgid "Popular Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:28
+msgid "Search Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:30
+msgid "No Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:31
+msgid "Projects list"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:32
+msgid "Projects list navigation"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "soapatrickeight"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.soapatrick.com"
+msgstr ""
