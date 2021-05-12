@@ -31,17 +31,16 @@
 </head>
 
 <body <?php body_class(); ?> 
-<?php 
-  if(is_post_type_archive('lab')):
-    echo 'data-theme="darkpink"';
-  elseif(is_page_template('template-pages/patrick-page.php')):
-    echo 'data-theme="red"';
-  elseif(is_page_template('template-pages/privacy-page.php')):
-    echo 'data-theme="black"';    
-  endif;
-?>
+  <?php 
+    if(is_post_type_archive('lab')):
+      echo 'data-theme="darkpink"';
+    elseif(is_page_template('template-pages/patrick-page.php')):
+      echo 'data-theme="red"';
+    elseif(is_page_template('template-pages/privacy-page.php')):
+      echo 'data-theme="black"';    
+    endif;
+  ?>
 >
-
   <?php
     get_template_part( 'template-partials/layout/search');
     get_template_part( 'template-partials/layout/navigation'); 
