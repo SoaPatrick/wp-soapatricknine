@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-#Gutenberg
---------------------------------------------------------------*/
+/*------------------------------------*\
+  #Gutenberg
+\*------------------------------------*/
 
 /*
 This file is used to contain all Gutenberg imports.
@@ -10,6 +10,7 @@ Files inside this folder should contain all styles relating to a reusable Gutenb
 //Import Gutenberg files
 @import "blockquote";
 @import "columns";
+@import "embeds";
 @import "figures";
 @import "galleries";
 @import "youtube";

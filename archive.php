@@ -15,9 +15,9 @@ get_header();
       <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
       <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>">Box</a></span>
       <?php if( is_tag() ) : ?>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>/tags/">Tags</a></span>
+        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>tags/">Tags</a></span>
       <?php else : ?>
-        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>/storage/">Storage</a></span>
+        <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>storage/">Storage</a></span>
       <?php endif; ?>      
       <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_archive_title();?></span>
     </nav>  

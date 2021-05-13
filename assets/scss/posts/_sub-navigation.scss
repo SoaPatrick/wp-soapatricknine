@@ -1,27 +1,26 @@
 /*------------------------------------*\
-  #Post navigation
+  #Sub-Navigation
 \*------------------------------------*/
 
-.post-navigation {
-  margin-top: 4rem;
+.sub-navigation {
   display: inline-grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "older newer";
+  grid-template-areas: "storage tags";
+  font-family: "Recoleta", serif;
   font-family: $font-family__heading;
-  max-width: $aligncontent;
 
   a {
     display: inline;
     
     &:first-child {
       justify-self: start;
-      grid-area: newer;      
+      grid-area: storage;      
     }
 
     &:last-child {
-      justify-self: end;
-      grid-area: older;      
+      justify-self: start;
+      grid-area: tags;      
     }
   }
 }

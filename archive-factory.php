@@ -16,15 +16,19 @@ get_header(); ?>
   </nav>
 
   <header>
-    <div class="marginal-icon marginal-icon--section">
-      <?php soapatricknine_svg_icons('factory-dual'); ?>                       
-    </div>       
+    <?php if( !is_paged() ) : ?>   
+      <div class="marginal-icon marginal-icon--section">
+        <?php soapatricknine_svg_icons('factory-dual'); ?>
+      </div>
+    <?php endif ; ?>            
     <h1>SoapFactory</h1>
   </header>
   <div class="site__content">
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
-    </p>
+    <?php if( !is_paged() ) : ?>    
+      <p class="lead">
+        Some projects that took quite some time to finish and had a clear goal and purpose.
+      </p>
+    <?php endif ; ?>
     <div class="tags">
       <?php
         $args = array(

@@ -14,11 +14,11 @@ get_header();
 
       <nav aria-label="breadcrumb" class="breadcrumbs">
         <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
-        <span class="breadcrumbs__item breadcrumbs__item--last"><?php esc_html_e( 'Search', 'soapatricknine' ) ?></span>
+        <span class="breadcrumbs__item breadcrumbs__item--last">Search</span>
       </nav>  
 
       <header>
-  		  <h1><?php printf( esc_html__( 'Search: %s', 'soapatricknine' ), get_search_query() ); ?></h1>
+  		  <h1><?php printf( esc_html'Search: %s', get_search_query() ); ?></h1>
       </header>
       <div class="site__content">
         <?php

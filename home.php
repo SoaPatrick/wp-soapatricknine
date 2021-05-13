@@ -16,22 +16,22 @@ get_header();
         <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></span>
         <span class="breadcrumbs__item breadcrumbs__item--last">Box</span>
       </nav>
-      <?php if( !is_paged() ) : ?>
-        <header>
+      <header>
+        <?php if( !is_paged() ) : ?>
           <div class="marginal-icon marginal-icon--section">
             <?php soapatricknine_svg_icons('box-dual'); ?>
-          </div>  
-          <h1>SoapBox</h1>
-        </header>
-			<?php endif; ?>
+          </div>
+        <?php endif; ?>            
+        <h1>SoapBox</h1>
+      </header>
       <div class="site__content">
         <?php if( !is_paged() ) : ?>
           <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+            All my thoughts, my work, and some stuff I thought would be interesting to share from over 20 years!
           </p>
           <nav class="sub-navigation">
-            <a href="<?php echo get_post_type_archive_link('post'); ?>/storage/">Storage &rarr;</a>
-            <a href="<?php echo get_post_type_archive_link('post');?>/tags/"">Tags &rarr;</a>
+            <a href="<?php echo get_post_type_archive_link('post'); ?>storage/">Storage &rarr;</a>
+            <a href="<?php echo get_post_type_archive_link('post');?>tags/"">Tags &rarr;</a>
           </nav>
         <?php endif; ?>        
         <?php

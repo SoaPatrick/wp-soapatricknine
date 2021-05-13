@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-#Components
---------------------------------------------------------------*/
+/*------------------------------------*\
+  #Components
+\*------------------------------------*/
 
 /*
 This file is used to contain all components imports.
@@ -10,5 +10,6 @@ Files inside this folder can contain specific element styles and layout.
 //Import Component files
 @import "breadcrumbs";
 @import "changelog";
+@import "letterboxd-feed";
 @import "marginal-icons";
 @import "tags";

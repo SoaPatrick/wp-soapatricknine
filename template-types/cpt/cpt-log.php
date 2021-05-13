@@ -10,13 +10,13 @@
 function soapatricknine_add_cpt_log() {
 
   $labels = array(
-    'name'                  => _x( 'Log', 'Post Type General Name', 'soapatricknine' ),
-    'singular_name'         => _x( 'Log', 'Post Type Singular Name', 'soapatricknine' ),
-    'menu_name'             => __( 'Log', 'soapatricknine' ),
+    'name'                  => 'Log',
+    'singular_name'         => 'Log',
+    'menu_name'             => 'Log',
   );
   $args = array(
-    'label'                 => __( 'Log', 'soapatricknine' ),
-    'description'           => __( 'Changelogs', 'soapatricknine' ),
+    'label'                 => 'Log',
+    'description'           => 'Changelogs',
     'labels'                => $labels,
     'supports'              => array( 'title' ),
     'hierarchical'          => false,

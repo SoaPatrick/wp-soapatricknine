@@ -16,10 +16,7 @@ get_header();
     <span class="breadcrumbs__item breadcrumbs__item--last">Storage</span>
   </nav>
 
-  <header>
-    <div class="marginal-icon marginal-icon--section">
-      <?php soapatricknine_svg_icons('storage-dual'); ?>
-    </div>         
+  <header>        
     <h1>Storage</h1>
   </header>
   <div class="site__content">

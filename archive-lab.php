@@ -15,15 +15,19 @@ get_header(); ?>
   </nav>
 
   <header>
-    <div class="marginal-icon marginal-icon--section">
-      <?php soapatricknine_svg_icons('lab-dual'); ?>           
-    </div>        
+    <?php if( !is_paged() ) : ?>   
+      <div class="marginal-icon marginal-icon--section">
+        <?php soapatricknine_svg_icons('lab-dual'); ?>                     
+      </div>
+    <?php endif ; ?>               
     <h1>SoapLab</h1>
   </header>
   <div class="site__content">
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
-    </p>
+    <?php if( !is_paged() ) : ?>    
+      <p class="lead">
+        Sometimes I just like to experiment on something without any idea where it might lead.
+      </p>
+    <?php endif ; ?>
     <div class="masonry-grid">
       <?php
         if ( have_posts() ) :

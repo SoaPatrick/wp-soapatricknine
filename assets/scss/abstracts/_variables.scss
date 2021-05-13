@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #Variables
+\*------------------------------------*/
+
 // Colors
 $color__white: #ffffff;
 $color__black: #000000;
@@ -18,7 +22,7 @@ $font-family__code: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono",
   Courier, monospace;
 
 
-  // Font-Sizes
+// Font-Sizes
 $font-size__base: clamp(18px, 3vw, 22px);
 $font-size__h1: 2.2rem;
 $font-size__h2: 1.5rem;
@@ -82,20 +86,6 @@ $breakpoints: (
     --margin__body: 2rem;    
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --color__text: #{$color__white};
-//     --color__body: #{$color__gray--dark};  
-//   }
-// }
-
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     --color__body: #{$color__white};
-//     --color__text: #{$color__gray--dark};  
-//   }
-// }
 
 [data-theme="black"] {
   --color__text: #{$color__white};

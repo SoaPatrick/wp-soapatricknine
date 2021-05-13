@@ -16,10 +16,7 @@ get_header();
     <span class="breadcrumbs__item breadcrumbs__item--last">Tags</span>
   </nav>    
 
-  <header>
-    <div class="marginal-icon marginal-icon--section">
-      <?php soapatricknine_svg_icons('tags-dual'); ?>         
-    </div>       
+  <header>     
     <h1>Tags</h1>
   </header>
   <div class="site__content">
@@ -27,7 +24,7 @@ get_header();
       <?php
         $args = array(
           'smallest'                  => .63,
-          'largest'                   => 2.5,
+          'largest'                   => 2.3,
           'unit'                      => 'rem'
         );
 

@@ -10,17 +10,17 @@
 function soapatricknine_add_cpt_lab() {
 
   $labels = array(
-    'name'                  => _x( 'Lab', 'Post Type General Name', 'soapatricknine' ),
-    'singular_name'         => _x( 'Lab', 'Post Type Singular Name', 'soapatricknine' ),
-    'menu_name'             => __( 'Lab', 'soapatricknine' ),
-    'name_admin_bar'        => __( 'Lab Item', 'soapatricknine' ),
-    'view_items'            => __( 'View Lab', 'soapatricknine' ),
-    'view_item'             => __( 'View Lab Item', 'soapatricknine' ),
-    'search_items'          => __( 'Search Lab', 'soapatricknine' ),
+    'name'                  => 'Lab',
+    'singular_name'         => 'Lab',
+    'menu_name'             => 'Lab',
+    'name_admin_bar'        => 'Lab Item',
+    'view_items'            => 'View Lab',
+    'view_item'             => 'View Lab Item',
+    'search_items'          => 'Search Lab',
   );
   $args = array(
-    'label'                 => __( 'Lab', 'soapatricknine' ),
-    'description'           => __( 'Lab Items', 'soapatricknine' ),
+    'label'                 => 'Lab',
+    'description'           => 'Lab Items',
     'labels'                => $labels,
     'supports'              => array( 'title','thumbnail' ),
     'taxonomies'            => array( '' ),

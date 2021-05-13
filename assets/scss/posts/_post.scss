@@ -50,7 +50,7 @@
 
   h1 {
     margin: .5rem 0 2rem;
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: $font-size__large;
   }
 
   &--list {

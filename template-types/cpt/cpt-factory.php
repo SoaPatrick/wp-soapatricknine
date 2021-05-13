@@ -10,17 +10,17 @@
 function soapatricknine_add_cpt_factory() {
 
   $labels = array(
-    'name'                  => _x( 'Factory', 'Post Type General Name', 'soapatricknine' ),
-    'singular_name'         => _x( 'Factory', 'Post Type Singular Name', 'soapatricknine' ),
-    'menu_name'             => __( 'Factory', 'soapatricknine' ),
-    'name_admin_bar'        => __( 'Factory Item', 'soapatricknine' ),
-    'view_items'            => __( 'View Factory', 'soapatricknine' ),
-    'view_item'             => __( 'View Factory Item', 'soapatricknine' ),
-    'search_items'          => __( 'Search Factory', 'soapatricknine' ),
+    'name'                  => 'Factory',
+    'singular_name'         => 'Factory',
+    'menu_name'             => 'Factory',
+    'name_admin_bar'        => 'Factory Item',
+    'view_items'            => 'View Factory',
+    'view_item'             => 'View Factory Item',
+    'search_items'          => 'Search Factory',
   );
   $args = array(
-    'label'                 => __( 'Factory', 'soapatricknine' ),
-    'description'           => __( 'Factory Items', 'soapatricknine' ),
+    'label'                 => 'Factory',
+    'description'           => 'Factory Items',
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
     'taxonomies'            => array( 'factory_tags' ),

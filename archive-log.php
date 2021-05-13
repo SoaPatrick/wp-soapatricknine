@@ -22,7 +22,7 @@ get_header(); ?>
   </header>
   <div class="site__content">
     <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+      A history of changes to this website.
     </p>    
     <div class="changelog" data-infinite-scroll='{ "path": ".post-navigation__previous", "append": ".changelog__day", "history": false, "scrollThreshold": false, "button" : ".post-navigation__previous" }'>
       <?php
@@ -42,17 +42,7 @@ get_header(); ?>
             $label = $field['choices'][ $value ];
             ?>
               <li>
-                <?php
-                  if($value == 'added'):
-                    soapatricknine_svg_icons('added');
-                  elseif($value == 'removed'):
-                    soapatricknine_svg_icons('removed');
-                  elseif($value == 'changed'):
-                    soapatricknine_svg_icons('changed');
-                  elseif($value == 'fixed'):
-                    soapatricknine_svg_icons('fixed');
-                  endif;
-                ?>
+                <?php soapatricknine_svg_icons('added'); ?>
                 <strong><?php echo $label ?></strong>
                 <?php the_title(); ?>
               </li>

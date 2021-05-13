@@ -13,9 +13,9 @@
   <h1>
     <?php
       if ( is_search() ) :
-        esc_html_e( 'I found nothing!', 'soapatricknine' );
+        echo 'I found nothing!';
       else :
-        esc_html_e( 'Something went wrong!', 'soapatricknine' );
+        echo 'Something went wrong!';
       endif;
     ?>
   </h1>
@@ -24,9 +24,9 @@
 <div class="site__content">
   <?php
     if ( is_search() ) :
-        echo '<p>' . __( 'Sorry, but I can&rsquo;t find what you&rsquo;re looking for. Please try again with other words.', 'soapatricknine' ) . '</p>';
+        echo '<p>' . 'Sorry, but I can&rsquo;t find what you&rsquo;re looking for. Please try again with other words.' . '</p>';
     else :
-        echo '<p>' . __( 'It seems I can&rsquo;t find what you&rsquo;re looking for. Try finding it?', 'soapatricknine' ) . '</p>';
+        echo '<p>' . 'It seems I can&rsquo;t find what you&rsquo;re looking for. Try finding it?' . '</p>';
     endif;
     get_search_form();
     the_widget( 'WP_Widget_Recent_Posts' );

@@ -2,8 +2,8 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/wp-content/themes/soapatrickeight/assets/favicon/mstile-150x150.png"/>
-            <TileColor>#222222</TileColor>
+            <square150x150logo src="/wp-content/themes/soapatricknine/assets/favicon/mstile-150x150.png"/>
+            <TileColor>#ffffff</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

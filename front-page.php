@@ -20,11 +20,14 @@ $home_items = new WP_Query( $args );
   ?>
 
   <header>
+    <div class="marginal-icon marginal-icon--image">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patrick1.jpg?_t=20210513" alt="Patrick">         
+    </div>    
     <h1>SoaPatrick</h1>
   </header>
   <div class="site__content">
     <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum, magna nec venenatis mollis, lacus nisi fringilla neque, id porta nisi lorem in risus. Phasellus sit amet accumsan augue, ut rhoncus purus. Cras aliquet.
+      Welcome to my small nook of <strong>space-consuming</strong> bullshit where I babble about all kinds of stuff that interests me.
     </p>    
 
     <?php

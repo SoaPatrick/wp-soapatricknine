@@ -93,8 +93,8 @@ endif;
 if ( ! function_exists( 'soapatricknine_post_navigation' ) ) :
   function soapatricknine_post_navigation() {
     echo '<nav class="post-navigation post-navigation--single">';
-    next_post_link( '%link', __( 'newer &rarr;', 'soapatricknine' ) );
-    previous_post_link('%link', __( '&larr; older', 'soapatricknine' ) );
+    next_post_link( '%link', 'newer &rarr;' );
+    previous_post_link('%link', '&larr; older' );
     echo '</nav>';
   }
 endif;
@@ -108,13 +108,13 @@ if ( ! function_exists( 'soapatricknine_posts_navigation' ) ) :
 	function soapatricknine_posts_navigation() {
     echo '<nav class="post-navigation">';
     if ( 'post' === get_post_type() ) {
-      posts_nav_link( ' ', __( 'newer &rarr;', 'soapatricknine' ), __( '&larr; older', 'soapatricknine' ) );
+      posts_nav_link( ' ', 'newer &rarr;', '&larr; older' );
     }
     if ( 'factory' === get_post_type() || 'lab' === get_post_type() ) {
-      posts_nav_link( ' ', __( 'newer &rarr;', 'soapatricknine' ), __( '&larr; older', 'soapatricknine' ) );
+      posts_nav_link( ' ', 'newer &rarr;', '&larr; older' );
     }
     if ( 'log' === get_post_type() ) {
-      next_posts_link( __( 'load more &darr;', 'soapatricknine' ) );
+      next_posts_link( 'load more &darr;' );
     }
     echo '</nav>';
 	}
@@ -182,25 +182,7 @@ function soapatricknine_give_linked_images_class($content) {
   }
   return $content;
 }
-//add_filter('the_content','soapatricknine_give_linked_images_class');
-
-
-/**
- * wrap all iframes within content with a div and class
- *
- */
-function soapatricknine_iframe_wrapper($content) {
-  $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
-  preg_match_all($pattern, $content, $matches);
-
-  foreach ($matches[0] as $match) {
-    $wrappedframe = '<div class="responsive-container">' . $match . '</div>';
-    $content = str_replace($match, $wrappedframe, $content);
-  }
-
-  return $content;
-}
-//add_filter('the_content', 'soapatricknine_iframe_wrapper');
+add_filter('the_content','soapatricknine_give_linked_images_class');
 
 
 /**
@@ -287,7 +269,7 @@ function soapatricknine_add_opengraph_infos() {
   $default_image = get_template_directory_uri().'/assets/favicon/android-chrome-512x512.png';
 
   // if page is not single
-  if ( !is_singular() ) {
+  if ( !is_singular() || is_front_page() || is_page('storage') || is_page('tags')) {
     echo '<meta name="description" content="' . get_bloginfo('description') . '"/>';
     echo '<meta property="og:type" content="article"/>';
     echo '<meta property="og:title" content="' . get_bloginfo('name') . '"/>';
@@ -497,9 +479,9 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
         $svgicon .= '</svg>';      
         break;        
       case 'sp-logo';
-        $svgIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 894.28 1024">';
-        $svgIcon .= '<path fill="currentColor" d="M323.6,1023.67,572.31,197.44h177.1c51.76,0,89.85,6.51,112.64,19.54,21.81,12.37,32.23,34.83,32.23,68.36,0,27-6.19,60.23-18.23,99L828.52,542.52c-11.4,37.11-23.77,68.36-37.11,92.78-13,23.76-28.65,43-46.88,57-17.91,14-39.72,24.09-64.46,30-25.07,6.19-56,9.12-91.8,9.12H553.11L465.21,1024h0l-141.61-.33ZM636.45,582.89A51.51,51.51,0,0,0,658.91,578c7.16-3.25,13.35-9.44,19.21-18.23,5.2-8.13,10.74-19.2,16.27-33.2q8.31-20.51,17.58-53.72c8.47-26.69,14.65-48.83,18.56-65.43,3.91-16.93,5.86-29.63,5.86-38.74,0-11.07-3.58-17.91-10.42-20.84-4.88-1.95-11.39-2.93-20.18-2.93l-38.09.33-66.41,221-4.89,16.28Z"></path>';
-        $svgIcon .= '<path fill="currentColor" d="M130.56,856.83c-6.84,0-15.63-.32-16.28-.32-33.21-1.63-59.9-9.12-79.43-22.47C12.06,818.42.67,792.7,0,754.94c-.32-25.39,4.89-57.3,15.63-94.41L34.2,596.07H170.27l-12.69,41.67c-4.56,17.58-6.84,30.28-6.84,39.72.33,19.86,11.4,31.25,30.28,31.25h1a73.18,73.18,0,0,0,15.3-1.63l.66-.32a50.68,50.68,0,0,0,22.13-15c9.12-11.07,17.26-27.67,24.74-51.43,4.89-17.91,7.17-33.54,7.17-47.53,0-24.42-5.86-45.91-17.58-63.16-11.07-16.28-23.12-32.88-36.46-49.16-8.47-9.76-16.93-20.51-25.4-31.57a206.37,206.37,0,0,1-21.81-35.81,213.32,213.32,0,0,1-15.62-42.65,207.61,207.61,0,0,1-6.19-52.09c0-30.92,6.19-67.06,18.23-108.08,11.39-37.11,24.42-69.66,38.74-96.68,14.32-26.37,31.25-48.51,50.46-65.11a185.79,185.79,0,0,1,67.39-36.79C329.47,3.91,359.74,0,393.92,0,440.15,0,475,8.14,498.1,24.09c22.46,15.63,33.53,41.67,33.53,79.76,0,25.39-5.86,57-16.93,94.08l-19.53,64.13H357.79l14.65-43.62c4.88-17.25,7.48-30.28,7.48-39.39,0-20.18-11.06-31.58-30.6-31.58-15.3,0-28.32,5.86-38.09,17.58-9.44,11.07-16.92,28-23.43,52.41A155.66,155.66,0,0,0,282.91,237a100.72,100.72,0,0,0-1.3,17.25c0,21.49,5.53,40.37,16.28,56.32,10.09,15,22.13,30.28,35.16,45.9,8.13,9.77,16.6,20.51,25.39,31.58a246.34,246.34,0,0,1,22.46,36.46c6.84,13.35,12.37,28.65,16.93,44.93s6.84,34.83,6.84,55a347.36,347.36,0,0,1-3.91,49.48c-2.6,17.91-7.16,37.12-13,57.63-13,43.62-27,80.08-41.67,109.05C331.42,768.94,314.16,792.38,295,810a167.1,167.1,0,0,1-67.06,36.79c-26.05,7.16-56.65,10.74-91.48,10.74A18.09,18.09,0,0,0,130.56,856.83Z"></path>';
+        $svgIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.66 314.5">';
+        $svgIcon .= '<path fill="currentColor" d="M99.39,314.4,175.77,60.64h54.39c15.9,0,27.6,2,34.6,6,6.7,3.8,9.9,10.7,9.9,21,0,8.29-1.9,18.49-5.6,30.39l-14.6,48.59c-3.5,11.4-7.3,21-11.4,28.5a55.09,55.09,0,0,1-14.39,17.5,51.09,51.09,0,0,1-19.8,9.19c-7.7,1.9-17.2,2.8-28.2,2.8h-10.8l-27,89.89h0l-43.49-.1ZM222,132.7c1.37-5.27,4.21-16.67,4.21-19.47,0-3.4-1.1-5.5-3.2-6.4a16.93,16.93,0,0,0-6.2-.9l-11.7.1-20.4,67.89-1.5,5,12.3.1a15.84,15.84,0,0,0,6.9-1.5,14.81,14.81,0,0,0,5.9-5.6c2.89-4.06,5.55-11.69,7.24-17.14C217,150,219.68,141.42,222,132.7Z"></path>';
+        $svgIcon .= '<path fill="currentColor" d="M86.49,78.09a31.07,31.07,0,0,0,5,17.29,177.31,177.31,0,0,0,10.8,14.1c2.5,3,5.1,6.3,7.8,9.7a76,76,0,0,1,6.9,11.2,74.66,74.66,0,0,1,5.19,13.8,63,63,0,0,1,2.1,16.89,106.54,106.54,0,0,1-1.2,15.2,138.85,138.85,0,0,1-4,17.7,205.56,205.56,0,0,1-12.8,33.49,76,76,0,0,1-15.7,21.3c-5.9,5.3-11.89,8.56-20.6,11.3-14.43,3.76-25.73,3.34-34.89,3s-18.4-2.8-24.4-6.9c-7-4.8-10.5-12.7-10.7-24.3-.1-7.8,1.5-17.59,4.8-29l5.7-19.8H52.3l-3.9,12.8c-1.4,5.4-2.1,9.3-2.1,12.2.1,6.1,3.34,9.46,9.3,9.59,6.14,0,9.33-2.22,12-5.19,2.34-2.7,5.3-8.5,7.6-15.8a55.67,55.67,0,0,0,2.2-14.6c0-7.5-1.8-14.1-5.4-19.4-3.4-5-7.1-10.09-11.2-15.09-2.6-3-5.19-6.3-7.79-9.7a63.23,63.23,0,0,1-6.7-11,65.57,65.57,0,0,1-4.8-13.1,63.82,63.82,0,0,1-1.9-16c0-9.49,1.9-20.59,5.6-33.19a171.38,171.38,0,0,1,11.9-29.7,70.91,70.91,0,0,1,15.49-20A57.13,57.13,0,0,1,93.29,3.6,95.93,95.93,0,0,1,121,0c14.2,0,24.9,2.5,32,7.4,6.9,4.8,10.3,12.8,10.3,24.49,0,7.8-1.8,17.5-5.2,28.9l-6,19.7H110.59l3.8-13.4c1.5-5.3,2.3-9.3,2.3-12.1,0-6.2-3.4-9.7-9.4-9.7a14.65,14.65,0,0,0-11.7,5.4c-2.9,3.4-4.84,8.47-6.39,13.2A44.67,44.67,0,0,0,86.49,78.09Z"></path>';
         $svgicon .= '</svg>';      
         break;                                                                                                    
       default:
@@ -509,7 +491,6 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
     echo $svgIcon;
   }
 endif;
-
 
 
 /**
