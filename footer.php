@@ -12,7 +12,7 @@
 ?>
     </main>
     <footer class="global-footer">
-      <p>Stuff from 2000 to <?php echo date('Y'); ?> by SoaPatrick<a href="<?php echo get_post_type_archive_link('log');?>">Eight</a></p>
+      <p>Stuff from 2000 to <?php echo date('Y'); ?> by SoaPatrick<a href="<?php echo get_post_type_archive_link('log');?>">Nine</a></p>
     </footer>
 
   </div>
