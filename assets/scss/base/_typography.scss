@@ -145,8 +145,12 @@ ul,
 ol {
   margin: 1rem 0;
   list-style: none;
-  padding: 0;
   line-height: $line-height__base;
+  padding-left: 1rem;  
+
+  @include mq(small) {
+    padding-left: 0rem;
+  }  
 
   ul,
   ol {
