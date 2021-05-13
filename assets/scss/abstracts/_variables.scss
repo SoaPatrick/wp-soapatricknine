@@ -21,7 +21,6 @@ $font-family__code: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono",
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New",
   Courier, monospace;
 
-
 // Font-Sizes
 $font-size__base: clamp(18px, 3vw, 22px);
 $font-size__h1: 2.2rem;
@@ -39,19 +38,16 @@ $line-height__heading: 1.1;
 // Font-Weight:
 $font-weight__light: 300;
 $font-weight__regular: 400;
-$font-weight__bold: 600;
 
-
+// alignments
 $aligncontent: 750px;
 $alignwide: 1200px;
 $alignfull: 100%;
 
+// marginal stuff
 $marginal-base: clamp(2rem, 7vw, 5rem);
-
 $marginal-width: calc(#{$marginal-base} + 1rem);
 $marginal-width--medium: calc(#{$marginal-base} + 2rem);
-
-
 
 // Z-Indices
 // z-index: z(navbar);
@@ -87,6 +83,7 @@ $breakpoints: (
   }
 }
 
+// Privacy Page
 [data-theme="black"] {
   --color__text: #{$color__white};
   --color__body: #{$color__black};
@@ -98,6 +95,7 @@ $breakpoints: (
   --color__link--secondary: #{$color__white};      
 }
 
+// Patrick Page
 [data-theme="red"] {
   --color__text: #{$color__white};
   --color__highlight: #{$color__white};  
@@ -109,6 +107,7 @@ $breakpoints: (
   --color__link--secondary: #{$color__gray--dark};      
 }
 
+// Lab Page
 [data-theme="darkpink"] {
   --color__text: #{$color__white};
   --color__body: #{$color__gray--dark};  
