@@ -31,7 +31,11 @@
     align-items: flex-start;
 
     a {
-      padding: .15rem 0;
+      padding: .35rem 0;
+
+      @include mq(small) {
+        padding: .25rem 0;
+      }      
     }
   }
 }
