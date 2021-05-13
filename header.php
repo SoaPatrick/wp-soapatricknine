@@ -19,14 +19,7 @@
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php
     wp_head();
-    get_template_part( 'template-partials/head/favicon');
-
-    if(is_post_type_archive('lab') || is_front_page()):
-      ?>
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
-      <?php
-    endif;    
+    get_template_part( 'template-partials/head/favicon'); 
   ?>
 </head>
 

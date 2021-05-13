@@ -105,7 +105,7 @@ endif;
  *
  */
 if ( ! function_exists( 'soapatricknine_posts_navigation' ) ) :
-	function soapatricknine_posts_navigation() {
+  function soapatricknine_posts_navigation() {
     echo '<nav class="post-navigation">';
     if ( 'post' === get_post_type() ) {
       posts_nav_link( ' ', 'newer &rarr;', '&larr; older' );
@@ -117,7 +117,7 @@ if ( ! function_exists( 'soapatricknine_posts_navigation' ) ) :
       next_posts_link( 'load more &darr;' );
     }
     echo '</nav>';
-	}
+  }
 endif;
 
 

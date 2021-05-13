@@ -18,7 +18,7 @@ get_header();
       </nav>  
 
       <header>
-  		  <h1><?php printf( esc_html'Search: %s', get_search_query() ); ?></h1>
+        <h1><?php printf( 'Search: %s', get_search_query() ); ?></h1>
       </header>
       <div class="site__content">
         <?php
