@@ -45,5 +45,31 @@
     svg {
       width: 80%;
     }     
-  }    
+  }
+  
+  &--home {
+    position: static;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    height: auto;     
+    
+    img {
+      width: clamp(7.5rem, 15vw, 15rem);
+      height: auto; 
+    }
+
+    + h1 {
+      text-align: center;
+
+      span {
+        position: relative;
+        top: .2em;
+      }
+
+      + .lead {
+        text-align: center;
+      }
+    }
+  }  
 }

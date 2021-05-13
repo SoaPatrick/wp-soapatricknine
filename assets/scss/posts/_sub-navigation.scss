@@ -3,24 +3,15 @@
 \*------------------------------------*/
 
 .sub-navigation {
-  display: inline-grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "storage tags";
-  font-family: "Recoleta", serif;
+  display: flex;
   font-family: $font-family__heading;
 
   a {
     display: inline;
     
     &:first-child {
-      justify-self: start;
-      grid-area: storage;      
+      margin-right: 2rem;
     }
 
-    &:last-child {
-      justify-self: start;
-      grid-area: tags;      
-    }
   }
 }
