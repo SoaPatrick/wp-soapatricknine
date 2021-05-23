@@ -14,6 +14,9 @@ if ( ! function_exists( 'soapatricknine_setup' ) ) :
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
 
+    // disable comments feed
+    add_filter( 'feed_links_show_comments_feed', '__return_false' );     
+
     //Let WordPress manage the document title.
     add_theme_support( 'title-tag' );
 

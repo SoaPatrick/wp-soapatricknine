@@ -20,7 +20,7 @@ get_header(); ?>
         <?php soapatricknine_svg_icons('lab-dual'); ?>                     
       </div>
     <?php endif ; ?>               
-    <h1>SoapLab</h1>
+    <h1>SoapLab<?php soapatricknine_rss_feed_button('lab'); ?></h1>    
   </header>
   <div class="site__content">
     <?php if( !is_paged() ) : ?>    
