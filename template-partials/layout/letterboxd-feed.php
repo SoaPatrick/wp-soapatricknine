@@ -34,7 +34,7 @@
           $title = $item->get_title();
           $permalink = $item->get_permalink();
 
-          $description = str_replace( '<img ', '<img alt="'.$title.'" height="750px" width="500px"', $description );
+          $description = str_replace( '<img ', '<img alt="'.$title.'" height="750px" width="500px" loading="lazy"', $description );
           $titleParts = explode( ' ', $title );
           $titlePartsLength = sizeof($titleParts);
           $rating = $titleParts[$titlePartsLength - 1];

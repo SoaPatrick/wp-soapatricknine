@@ -21,7 +21,7 @@ get_header(); ?>
         <?php soapatricknine_svg_icons('factory-dual'); ?>
       </div>
     <?php endif ; ?>            
-    <h1>SoapFactory</h1>
+    <h1>SoapFactory<?php soapatricknine_rss_feed_button('factory'); ?></h1>
   </header>
   <div class="site__content">
     <?php if( !is_paged() ) : ?>    
