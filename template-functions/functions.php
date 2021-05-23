@@ -347,7 +347,7 @@ add_filter( 'body_class', 'soapatricknine_body_class', 10, 2 );
  */
 if ( ! function_exists( 'soapatricknine_rss_feed_button' ) ) :
   function soapatricknine_rss_feed_button($postType) {
-    $button = '<button type="button" id="feed-button" class="feed-btn" data-copy="' . get_post_type_archive_link($postType) .'feed"><span class="hidden-text">RSS</span><span class="tooltip-text" id="feed-tooltip">Copy RSS Feed URL</span></button>';
+    $button = '<button type="button" id="feed-button" class="feed-btn" data-copy="' . get_post_type_archive_link($postType) .'feed"><span class="hidden-text">RSS</span><span class="tooltip-text" id="feed-tooltip">Copy Feed URL</span></button>';
     echo $button;
   }
 endif;
