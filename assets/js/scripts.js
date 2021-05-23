@@ -41,6 +41,7 @@ window.onload = function(){
   if (document.getElementById('feed-button')) {
     var feedBtn = document.getElementById('feed-button');
     var feedBtnTooltip = document.getElementById("feed-tooltip");
+    var feedBtnTooltipText = feedBtnTooltip.innerHTML;
 
 
     feedBtn.addEventListener("click", async(event) => {
@@ -51,7 +52,7 @@ window.onload = function(){
       try {
         var copy_value = event.srcElement.getAttribute("data-copy");
         await navigator.clipboard.writeText(copy_value);
-        feedBtnTooltip.innerHTML = "Copied";
+        feedBtnTooltip.innerHTML = "URL copied";
         feedBtnTooltip.classList.add("copied");   
       } catch (error) {
         console.error("copy failed", error);
@@ -60,8 +61,13 @@ window.onload = function(){
 
     feedBtn.addEventListener("mouseout", function(){
       feedBtnTooltip.classList.remove("copied");
-      feedBtnTooltip.innerHTML = "Copy RSS Feed URL";  
+      feedBtnTooltip.innerHTML = feedBtnTooltipText;  
     });
+
+    feedBtn.addEventListener("focusout", function(){
+      feedBtnTooltip.classList.remove("copied");
+      feedBtnTooltip.innerHTML = feedBtnTooltipText;  
+    });    
   }
 
 };

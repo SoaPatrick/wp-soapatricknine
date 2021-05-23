@@ -11,6 +11,10 @@
   top: -2rem;
   margin-left: .5rem;
 
+  &:focus {
+    outline: 3px dotted var(--color__highlight);
+  }
+
   .hidden-text {
     text-indent: 100%;
     white-space: nowrap;
@@ -43,31 +47,39 @@
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    width: 150px;
-    left: 50%;    
-    margin-left: -75px;
+    width: 9em;
+    left: 100%;
+    margin-left: -8em;    
     opacity: 0;
+
+    @include mq(small) {
+      left: 50%;    
+      margin-left: -4.5em;
+    }    
     //transition: opacity 0.3s;
 
     &.copied {
-      animation: copied .2s ease-in-out; 
-      width: 70px;     
-      margin-left: -35px;            
+      animation: copied .15s ease-in-out;         
     }
 
     &::after {
       content: "";
       position: absolute;
       top: 100%;
-      left: 50%;
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
       border-color: var(--color__highlight) transparent transparent transparent;
+      left: calc(100% - 2em);      
+
+      @include mq(small) {      
+          left: 50%;
+      }      
     }
   }
   
-  &:hover .tooltip-text {
+  &:hover .tooltip-text,
+  &:focus .tooltip-text.copied {
     visibility: visible;
     opacity: 1;
   }
