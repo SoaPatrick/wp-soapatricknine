@@ -19,6 +19,15 @@
     > * {
       max-width: $aligncontent;
     }
+
+    a[target="_blank"]:not(.img-link) {
+      &::after {
+        display: inline-block;
+        transform: rotate(-35deg);
+        content: "\293B\00A0";
+        line-height: 0;
+      }
+    }    
   }
 
   &__meta {
