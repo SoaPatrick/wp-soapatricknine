@@ -342,6 +342,18 @@ add_filter( 'body_class', 'soapatricknine_body_class', 10, 2 );
 
 
 /**
+ * output RSS Feed Button
+ *
+ */
+if ( ! function_exists( 'soapatricknine_rss_feed_button' ) ) :
+  function soapatricknine_rss_feed_button($postType) {
+    $button = '<button type="button" id="feed-button" class="feed-btn" data-copy="' . get_post_type_archive_link($postType) .'feed"><span class="hidden-text">RSS</span><span class="tooltip-text" id="feed-tooltip">Copy RSS Feed URL</span></button>';
+    echo $button;
+  }
+endif;
+
+
+/**
  * output different svg icons
  *
  */
@@ -483,7 +495,7 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
         $svgIcon .= '<path fill="currentColor" d="M99.39,314.4,175.77,60.64h54.39c15.9,0,27.6,2,34.6,6,6.7,3.8,9.9,10.7,9.9,21,0,8.29-1.9,18.49-5.6,30.39l-14.6,48.59c-3.5,11.4-7.3,21-11.4,28.5a55.09,55.09,0,0,1-14.39,17.5,51.09,51.09,0,0,1-19.8,9.19c-7.7,1.9-17.2,2.8-28.2,2.8h-10.8l-27,89.89h0l-43.49-.1ZM222,132.7c1.37-5.27,4.21-16.67,4.21-19.47,0-3.4-1.1-5.5-3.2-6.4a16.93,16.93,0,0,0-6.2-.9l-11.7.1-20.4,67.89-1.5,5,12.3.1a15.84,15.84,0,0,0,6.9-1.5,14.81,14.81,0,0,0,5.9-5.6c2.89-4.06,5.55-11.69,7.24-17.14C217,150,219.68,141.42,222,132.7Z"></path>';
         $svgIcon .= '<path fill="currentColor" d="M86.49,78.09a31.07,31.07,0,0,0,5,17.29,177.31,177.31,0,0,0,10.8,14.1c2.5,3,5.1,6.3,7.8,9.7a76,76,0,0,1,6.9,11.2,74.66,74.66,0,0,1,5.19,13.8,63,63,0,0,1,2.1,16.89,106.54,106.54,0,0,1-1.2,15.2,138.85,138.85,0,0,1-4,17.7,205.56,205.56,0,0,1-12.8,33.49,76,76,0,0,1-15.7,21.3c-5.9,5.3-11.89,8.56-20.6,11.3-14.43,3.76-25.73,3.34-34.89,3s-18.4-2.8-24.4-6.9c-7-4.8-10.5-12.7-10.7-24.3-.1-7.8,1.5-17.59,4.8-29l5.7-19.8H52.3l-3.9,12.8c-1.4,5.4-2.1,9.3-2.1,12.2.1,6.1,3.34,9.46,9.3,9.59,6.14,0,9.33-2.22,12-5.19,2.34-2.7,5.3-8.5,7.6-15.8a55.67,55.67,0,0,0,2.2-14.6c0-7.5-1.8-14.1-5.4-19.4-3.4-5-7.1-10.09-11.2-15.09-2.6-3-5.19-6.3-7.79-9.7a63.23,63.23,0,0,1-6.7-11,65.57,65.57,0,0,1-4.8-13.1,63.82,63.82,0,0,1-1.9-16c0-9.49,1.9-20.59,5.6-33.19a171.38,171.38,0,0,1,11.9-29.7,70.91,70.91,0,0,1,15.49-20A57.13,57.13,0,0,1,93.29,3.6,95.93,95.93,0,0,1,121,0c14.2,0,24.9,2.5,32,7.4,6.9,4.8,10.3,12.8,10.3,24.49,0,7.8-1.8,17.5-5.2,28.9l-6,19.7H110.59l3.8-13.4c1.5-5.3,2.3-9.3,2.3-12.1,0-6.2-3.4-9.7-9.4-9.7a14.65,14.65,0,0,0-11.7,5.4c-2.9,3.4-4.84,8.47-6.39,13.2A44.67,44.67,0,0,0,86.49,78.09Z"></path>';
         $svgicon .= '</svg>';      
-        break;                                                                                                    
+        break;
       default:
         $svgIcon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline"><path fill="currentColor" d="M493.255 56.236l-37.49-37.49c-24.993-24.993-65.515-24.994-90.51 0L12.838 371.162.151 485.346c-1.698 15.286 11.22 28.203 26.504 26.504l114.184-12.687 352.417-352.417c24.992-24.994 24.992-65.517-.001-90.51zm-95.196 140.45L174 420.745V386h-48v-48H91.255l224.059-224.059 82.745 82.745zM126.147 468.598l-58.995 6.555-30.305-30.305 6.555-58.995L63.255 366H98v48h48v34.745l-19.853 19.853zm344.48-344.48l-49.941 49.941-82.745-82.745 49.941-49.941c12.505-12.505 32.748-12.507 45.255 0l37.49 37.49c12.506 12.506 12.507 32.747 0 45.255z"></path></svg>';
     }
@@ -563,11 +575,11 @@ add_filter( 'render_block', 'soapatricknine_gallery_block_lightbox', 10, 2 );
 
 
 /**
- * output only first block for Factory list on frontpage
+ * output only first block for Factory list on frontpage and search
  *
  */
 function soapatricknine_one_factory_block_frontpage($content) {
-  if( is_front_page() && has_blocks( $content ) && get_post_type() === 'factory') {
+  if( is_front_page() || is_search() && has_blocks( $content ) && get_post_type() === 'factory') {
     $blocks = parse_blocks( $content );
     if ( !empty($blocks) ) {
       return $blocks[0]['innerHTML'];
@@ -576,3 +588,21 @@ function soapatricknine_one_factory_block_frontpage($content) {
   return $content;
 }
 add_filter( 'the_content','soapatricknine_one_factory_block_frontpage', 0 );
+
+
+/**
+ * output special content for Lab and Factory RSS Feed
+ *
+ */
+function soapatricknine_one_rss_lab_image($content) {
+  global $post;
+  if ( 'lab' === get_post_type() ) {
+    if( has_post_thumbnail($post->ID) )
+      $content = '<p>' . get_the_post_thumbnail($post->ID, 'large') . '</p><p>' . get_the_post_thumbnail_caption( $post->ID ) . '</p>';
+    return $content;
+  } elseif ( 'factory' === get_post_type() ) {
+      $content = '<p>' . get_the_post_thumbnail($post->ID, 'large') . '</p><p>' . get_the_excerpt( $post->ID ) .'</p>';    
+    return $content;
+  } 
+}
+add_filter('the_content_feed', 'soapatricknine_one_rss_lab_image');

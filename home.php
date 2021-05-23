@@ -22,7 +22,7 @@ get_header();
             <?php soapatricknine_svg_icons('box-dual'); ?>
           </div>
         <?php endif; ?>            
-        <h1>SoapBox</h1>
+        <h1>SoapBox<?php soapatricknine_rss_feed_button('post'); ?></h1>
       </header>
       <div class="site__content">
         <?php if( !is_paged() ) : ?>
