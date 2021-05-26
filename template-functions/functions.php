@@ -596,7 +596,10 @@ add_filter( 'the_content','soapatricknine_one_factory_block_frontpage', 0 );
  */
 function soapatricknine_one_rss_lab_image($content) {
   global $post;
-  if ( 'lab' === get_post_type() ) {
+  if ( 'post' === get_post_type() ) {
+    $content = get_the_content( $post->ID );
+    return $content;
+  } elseif ( 'lab' === get_post_type() ) {
     if( has_post_thumbnail($post->ID) )
       $content = '<p>' . get_the_post_thumbnail($post->ID, 'large') . '</p><p>' . get_the_post_thumbnail_caption( $post->ID ) . '</p>';
     return $content;
