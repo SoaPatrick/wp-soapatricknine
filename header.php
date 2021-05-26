@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?> 
   <?php 
-    if(is_post_type_archive('lab')):
+    if(is_post_type_archive('lab') || is_singular('lab')):
       echo 'data-theme="darkpink"';
     elseif(is_page_template('template-pages/patrick-page.php')):
       echo 'data-theme="red"';
