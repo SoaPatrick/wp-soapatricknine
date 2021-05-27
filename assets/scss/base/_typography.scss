@@ -212,3 +212,12 @@ svg {
   font-family: $font-family__heading;
   white-space: nowrap;
 }
+
+/*
+ * helper classes
+ * -----------------------------------------------------------
+ */
+
+.hidden {
+  display: none;
+}

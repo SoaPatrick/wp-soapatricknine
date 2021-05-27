@@ -8,7 +8,7 @@
  */
 
 ?>            
-            
+<?php the_title( '<h1 class="hidden">', '</h1>' ); ?>
 <a aria-label="<?php the_title(); ?>" data-fslightbox
   <?php 
     if(get_field('is_video')) : 
