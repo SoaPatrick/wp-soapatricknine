@@ -32,6 +32,7 @@ $format = get_post_format();
       </div>
       <?php 
         if ($format === 'quote' || $format === 'link' || $format === 'status'):
+          the_title( '<h1 class="hidden">', '</h1>' );
           the_content();
         else:
           the_title( '<h1>', '</h1>' );

@@ -50,6 +50,9 @@ get_header(); ?>
             $day_check = $day;
 
           endwhile;
+
+          echo '</ul></div>';
+          
         endif;
       ?>
     </div>

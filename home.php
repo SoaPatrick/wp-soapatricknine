@@ -31,7 +31,7 @@ get_header();
           </p>
           <nav class="sub-navigation">
             <a href="<?php echo get_post_type_archive_link('post'); ?>storage/">Storage &rarr;</a>
-            <a href="<?php echo get_post_type_archive_link('post');?>tags/"">Tags &rarr;</a>
+            <a href="<?php echo get_post_type_archive_link('post'); ?>tags/">Tags &rarr;</a>
           </nav>
         <?php endif; ?>        
         <?php
