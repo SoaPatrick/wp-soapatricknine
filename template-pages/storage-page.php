@@ -49,7 +49,7 @@ get_header();
         endwhile;
       ?>
     </div>
-  </article>
+  </div>
 
 <?php
 get_footer();

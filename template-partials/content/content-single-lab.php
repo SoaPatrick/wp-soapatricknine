@@ -25,15 +25,14 @@
           soapatricknine_edit_post();
         ?>
       </div>
+      <?php the_title( '<h1 class="hidden">', '</h1>' ); ?>
     </header>
-    <?php if(!$format): ?>
-      <div class="post__content">
-        <figure class="wp-block-image">
-            <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
-            <figcaption>
-              <?php the_post_thumbnail_caption(); ?>
-            </figcaption>                     
-        </figure>
-      </div>
-    <?php endif; ?>
+    <div class="post__content">
+      <figure class="wp-block-image">
+          <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
+          <figcaption>
+            <?php the_post_thumbnail_caption(); ?>
+          </figcaption>
+      </figure>
+    </div>
   </article>

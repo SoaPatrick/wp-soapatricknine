@@ -21,7 +21,7 @@ $home_items = new WP_Query( $args );
 
   <header>
     <div class="marginal-icon marginal-icon--image marginal-icon--home">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patrick1.jpg?_t=20210513" alt="Patrick" height="400px" width="400px">         
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patrick1.jpg?_t=20210513" alt="Patrick" height="400" width="400">         
     </div>    
     <h1>Soa<span>Patrick</span></h1>
     <p class="lead">

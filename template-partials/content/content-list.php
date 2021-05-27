@@ -35,9 +35,11 @@ $postType = get_post_type();
     </div>  
     <?php
       if ($format === 'quote' || $format === 'link' || $format === 'status') :
+        the_title( '<h1 class="hidden">', '</h1>' );    
         the_content();
       else:
         if($postType === 'lab') : 
+          the_title( '<h1 class="hidden">', '</h1>' );   
           ?>
             <figure class="wp-block-image">
                 <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
