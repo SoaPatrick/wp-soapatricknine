@@ -11,11 +11,11 @@
       margin-left: calc(#{$marginal-width} * -1);
     }
 
-    @include mq(medium) {      
+    @include mq(medium) {
       max-width: calc(#{$alignwide} + #{$marginal-width--medium});
       margin-left: calc(#{$marginal-width--medium} * -1);
     }
-  }  
+  }
 
   .blocks-gallery-grid {
     display: flex;
@@ -60,7 +60,7 @@
       position: relative;
       width: 100%;
       margin-right: 0;
-      margin-bottom: 1rem;      
+      margin-bottom: 1rem;
 
       @include mq(small) {
         width: calc(100% - 1rem / 2);
@@ -75,6 +75,10 @@
       height: 100%;
       flex: 1;
       object-fit: cover;
+    }
+
+    figure {
+      height: 100%;
     }
   }
 

@@ -6,8 +6,17 @@ figure {
   margin: 0;
 }
 
-.wp-block-image { 
+.wp-block-image,
+.wp-block-video {
   margin: 2rem 0;
+
+  figcaption {
+    font-size: $font-size__small;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    color: inherit;
+  }
 
   * {
     clear: both;
@@ -26,17 +35,8 @@ figure {
     height: auto;
     display: block;
     margin: 0;
-    border-radius: 5px;    
+    border-radius: 5px;
   }
-
-  figcaption {
-    font-size: $font-size__small;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    font-style: italic;
-    color: inherit;
-  }  
-
 
   &.alignfull {
     @include mq(tiny) {
@@ -44,7 +44,7 @@ figure {
       margin-left: calc(#{$marginal-width} * -1);
     }
 
-    @include mq(medium) {      
+    @include mq(medium) {
       max-width: calc(#{$alignwide} + #{$marginal-width--medium});
       margin-left: calc(#{$marginal-width--medium} * -1);
     }
@@ -52,7 +52,7 @@ figure {
     figcaption {
       @include mq(tiny) {
         margin-left: #{$marginal-width};
-      }        
+      }
 
       @include mq(medium) {
         margin-left: #{$marginal-width--medium};
@@ -69,34 +69,32 @@ figure {
     img {
       margin: 0 auto;
     }
-  }  
-
+  }
 
   .alignleft,
   .alignright {
     width: auto;
-    margin-top: .35rem;
+    margin-top: 0.35rem;
     margin-bottom: 1rem;
-
 
     &.sizr-medium,
     &.size-large {
-      max-width: calc(40% - .5rem);
+      max-width: calc(40% - 0.5rem);
     }
 
     &.size-thumbnail {
-      max-width: calc(20% - .5rem);
-    }      
+      max-width: calc(20% - 0.5rem);
+    }
 
     @include mq(small) {
       &.sizr-medium,
       &.size-large {
-        max-width: calc(50% - .5rem);
+        max-width: calc(50% - 0.5rem);
       }
 
       &.size-thumbnail {
-        max-width: calc(25% - .5rem);
-      }  
+        max-width: calc(25% - 0.5rem);
+      }
     }
 
     figcaption {
@@ -112,9 +110,8 @@ figure {
   .alignright {
     float: right;
     margin-left: 1rem;
-  }      
+  }
 }
-
 
 // Video
 .wp-block-video {
