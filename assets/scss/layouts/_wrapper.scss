@@ -7,16 +7,20 @@
   flex-direction: column;
   min-height: 100%;
   margin-right: var(--margin__body);
-  margin-left: calc(var(--margin__body) + var(--width__navbar) + 2 * var(--margin__body));  
+  margin-left: calc(
+    var(--margin__body) + var(--width__navbar) + 2 * var(--margin__body)
+  );
 
   @include mq(tiny) {
-    padding-left: $marginal-width; 
+    padding-left: $marginal-width;
   }
 
   @include mq(medium) {
-    padding-left: $marginal-width--medium;     
+    padding-left: $marginal-width--medium;
     margin-right: var(--margin__body);
-    margin-left: calc(var(--margin__body) + var(--width__navbar) + var(--margin__body));    
+    margin-left: calc(
+      var(--margin__body) + var(--width__navbar) + var(--margin__body)
+    );
   }
 
   .global-main {
@@ -31,6 +35,6 @@
 
   @include mq(medium) {
     bottom: 2rem;
-    left: 2rem;    
-  }     
+    left: 2rem;
+  }
 }

@@ -13,15 +13,15 @@
 
   a {
     display: inline;
-    
+
     &:first-child {
       justify-self: start;
-      grid-area: newer;      
+      grid-area: newer;
     }
 
     &:last-child {
       justify-self: end;
-      grid-area: older;      
+      grid-area: older;
     }
   }
 }

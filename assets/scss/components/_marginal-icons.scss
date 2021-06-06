@@ -10,7 +10,7 @@
   color: $color__white;
   width: 2rem;
   height: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 
   &--image {
     background: none;
@@ -18,19 +18,19 @@
 
   @include mq(tiny) {
     position: absolute;
-    margin: 0;  
+    margin: 0;
     width: $marginal-base;
     height: $marginal-base;
     left: calc(#{$marginal-width} * -1);
   }
-  
+
   @include mq(medium) {
     left: calc(#{$marginal-width--medium} * -1);
   }
 
   img {
     border-radius: 50%;
-  }  
+  }
 
   svg {
     width: 33%;
@@ -44,19 +44,19 @@
 
     svg {
       width: 80%;
-    }     
+    }
   }
-  
+
   &--home {
     position: static;
     text-align: center;
     margin: 0 auto 1rem auto;
     width: 100%;
-    height: auto;     
-    
+    height: auto;
+
     img {
       width: clamp(7.5rem, 15vw, 15rem);
-      height: auto; 
+      height: auto;
     }
 
     + h1 {
@@ -64,12 +64,12 @@
 
       span {
         position: relative;
-        top: .2em;
+        top: 0.2em;
       }
 
       + .lead {
         text-align: center;
       }
     }
-  }  
+  }
 }
