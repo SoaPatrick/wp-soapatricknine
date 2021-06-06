@@ -42,7 +42,7 @@ get_header(); ?>
             $label = $field['choices'][ $value ];
             ?>
               <li>
-                <?php soapatricknine_svg_icons('added'); ?>
+                <?php soapatricknine_svg_icons($value); ?>
                 <strong><?php echo $label ?></strong>
                 <?php the_title(); ?>
               </li>
