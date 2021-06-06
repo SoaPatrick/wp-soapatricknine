@@ -18,7 +18,7 @@
     <header>
       <div class="marginal-icon">
         <?php soapatricknine_svg_icons('lab'); ?>
-      </div>      
+      </div>
       <div class="post__meta">
         <?php
           soapatricknine_posted_on();

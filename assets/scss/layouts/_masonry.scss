@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .masonry-grid {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 2rem;
@@ -15,7 +15,7 @@
   article {
     margin-bottom: 1rem;
 
-    @include mq(tiny) {    
+    @include mq(tiny) {
       margin-right: 1rem;
     }
   }
@@ -25,10 +25,10 @@
     border-radius: 5px;
 
     @include mq(tiny) {
-      height: clamp(150px,10vw,300px);
+      height: clamp(150px, 10vw, 300px);
       width: auto;
     }
-  }  
+  }
 
   @supports (grid-template-rows: masonry) {
     display: grid;
@@ -37,19 +37,19 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
     @include mq(small) {
-      grid-template-columns: repeat(auto-fill,minmax(265px,1fr));
-    }    
+      grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    }
 
     @include mq(large) {
-      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-    }        
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
 
     article {
       margin: 0;
     }
-    
+
     img {
       height: auto;
-    }    
+    }
   }
 }

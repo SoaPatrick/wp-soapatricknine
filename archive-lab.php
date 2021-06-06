@@ -15,15 +15,15 @@ get_header(); ?>
   </nav>
 
   <header>
-    <?php if( !is_paged() ) : ?>   
+    <?php if( !is_paged() ) : ?>
       <div class="marginal-icon marginal-icon--section">
-        <?php soapatricknine_svg_icons('lab-dual'); ?>                     
+        <?php soapatricknine_svg_icons('lab-dual'); ?>
       </div>
-    <?php endif ; ?>               
-    <h1>SoapLab<?php soapatricknine_rss_feed_button('lab'); ?></h1>    
+    <?php endif ; ?>
+    <h1>SoapLab<?php soapatricknine_rss_feed_button('lab'); ?></h1>
   </header>
   <div class="site__content">
-    <?php if( !is_paged() ) : ?>    
+    <?php if( !is_paged() ) : ?>
       <p class="lead">
         Sometimes I just like to experiment on something without any idea where it might lead.
       </p>

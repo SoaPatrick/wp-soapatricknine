@@ -57,29 +57,28 @@ $z-index: (
 
 // bp(sm-min)
 $breakpoints: (
-  tiny : 481px,  
-  small : 768px,
-  medium : 992px,
-  large : 1400px,
+  tiny: 481px,
+  small: 768px,
+  medium: 992px,
+  large: 1400px,
 );
 
 :root {
   --color__body: #{$color__white};
-  --color__text: #{$color__gray--dark};  
+  --color__text: #{$color__gray--dark};
   --color__highlight: #{$color__red};
   --color__search--bg: #{$color__red};
 
-
   --color__link: #{$color__red};
   --color__link--primary: #{$color__red};
-  --color__link--secondary: #{$color__gray--dark};  
+  --color__link--secondary: #{$color__gray--dark};
 
   --width__navbar: 1rem;
   --margin__body: 1rem;
 
   @include mq(medium) {
     --width__navbar: 100px;
-    --margin__body: 2rem;    
+    --margin__body: 2rem;
   }
 }
 
@@ -87,34 +86,34 @@ $breakpoints: (
 [data-theme="black"] {
   --color__text: #{$color__white};
   --color__body: #{$color__black};
-  --color__highlight: #{$color__gray}; 
-  --color__search--bg: #{$color__gray};  
-  
+  --color__highlight: #{$color__gray};
+  --color__search--bg: #{$color__gray};
+
   --color__link: #{$color__gray};
   --color__link--primary: #{$color__gray};
-  --color__link--secondary: #{$color__white};      
+  --color__link--secondary: #{$color__white};
 }
 
 // Patrick Page
 [data-theme="red"] {
   --color__text: #{$color__white};
-  --color__highlight: #{$color__white};  
+  --color__highlight: #{$color__white};
   --color__body: #{$color__red};
-  --color__search--bg: #{$color__gray--darker};    
+  --color__search--bg: #{$color__gray--darker};
 
   --color__link: #{$color__gray--dark};
   --color__link--primary: #{$color__white};
-  --color__link--secondary: #{$color__gray--dark};      
+  --color__link--secondary: #{$color__gray--dark};
 }
 
 // Lab Page
 [data-theme="darkpink"] {
   --color__text: #{$color__white};
-  --color__body: #{$color__gray--dark};  
+  --color__body: #{$color__gray--dark};
   --color__highlight: #{$color__pink};
-  --color__search--bg: #{$color__pink}; 
-  
+  --color__search--bg: #{$color__pink};
+
   --color__link: #{$color__pink};
   --color__link--primary: #{$color__pink};
-  --color__link--secondary: #{$color__white};    
+  --color__link--secondary: #{$color__white};
 }

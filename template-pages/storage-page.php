@@ -16,7 +16,7 @@ get_header();
     <span class="breadcrumbs__item breadcrumbs__item--last">Storage</span>
   </nav>
 
-  <header>        
+  <header>
     <h1>Storage</h1>
   </header>
   <div class="site__content">
