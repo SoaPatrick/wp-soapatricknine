@@ -23,7 +23,7 @@ $format = get_post_format();
     <header>
       <div class="marginal-icon">
         <?php soapatricknine_svg_icons($format); ?>
-      </div>      
+      </div>
       <div class="post__meta">
         <?php
           soapatricknine_posted_on();

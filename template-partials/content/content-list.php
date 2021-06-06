@@ -19,37 +19,37 @@ $postType = get_post_type();
         if ($postType === 'post') :
           if (has_post_thumbnail()) :
             the_post_thumbnail( 'thumbnail' );
-          else :        
+          else :
             soapatricknine_svg_icons($format);
           endif;
         else :
           soapatricknine_svg_icons($postType);
         endif;
       ?>
-    </div>    
+    </div>
     <div class="post__meta">
       <?php
         soapatricknine_posted_on();
         soapatricknine_edit_post();
       ?>
-    </div>  
+    </div>
     <?php
       if ($format === 'quote' || $format === 'link' || $format === 'status') :
-        the_title( '<h1 class="hidden">', '</h1>' );    
+        the_title( '<h1 class="hidden">', '</h1>' );
         the_content();
       else:
         if($postType === 'lab') : 
-          the_title( '<h1 class="hidden">', '</h1>' );   
+          the_title( '<h1 class="hidden">', '</h1>' );
           ?>
             <figure class="wp-block-image">
                 <?php get_template_part( 'template-partials/content/content', 'teaser-lab' ); ?>
                 <figcaption>
                   <?php the_post_thumbnail_caption(); ?>
-                </figcaption>                     
+                </figcaption>
             </figure>
           <?php
         elseif($postType === 'factory') : 
-          the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );           
+          the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
           the_content();
         else :
           the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); 

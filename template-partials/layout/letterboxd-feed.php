@@ -6,12 +6,12 @@
  */
 
 ?>
-    
-<section class="section">   
+
+<section class="section">
   <header>
     <div class="marginal-icon marginal-icon--section">
       <?php soapatricknine_svg_icons('tv-dual'); ?>
-    </div>       
+    </div>
     <h1>Last seen Movies</h1>
   </header>
   <div class="section__content letterboxd-rss">
@@ -42,10 +42,10 @@
             <div class="letterboxd-rss__item">
               <a href="<?php echo $permalink; ?>" class="img-link" target="_blank" rel="noreferrer" aria-label="<?php echo $title; ?>">
                 <div class="letterboxd-rss__description"><?php echo $description; ?></div>
-                <span class="letterboxd-rss__rating"><?php echo $rating; ?></span>                
+                <span class="letterboxd-rss__rating"><?php echo $rating; ?></span>
               </a>
             </div>
-          <?php 
+          <?php
         }
       ?>
     </div>
@@ -53,4 +53,4 @@
       <a href="https://letterboxd.com/soapatrick/"  target="_blank" class="more-link" rel="noreferrer">more &rarr;</a>
     </div>
   </div>
-</section>  
+</section>

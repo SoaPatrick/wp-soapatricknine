@@ -16,15 +16,15 @@ get_header(); ?>
   </nav>
 
   <header>
-    <?php if( !is_paged() ) : ?>   
+    <?php if( !is_paged() ) : ?>
       <div class="marginal-icon marginal-icon--section">
         <?php soapatricknine_svg_icons('factory-dual'); ?>
       </div>
-    <?php endif ; ?>            
+    <?php endif ; ?>
     <h1>SoapFactory<?php soapatricknine_rss_feed_button('factory'); ?></h1>
   </header>
   <div class="site__content">
-    <?php if( !is_paged() ) : ?>    
+    <?php if( !is_paged() ) : ?>
       <p class="lead">
         Some projects that took quite some time to finish and had a clear goal and purpose.
       </p>

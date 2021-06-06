@@ -15,10 +15,8 @@ get_header();
       get_template_part( 'template-partials/content/content-single', get_post_type() );
     endwhile;
 
-    if (is_single()):
-      if ( 'post' === get_post_type() ):
-        soapatricknine_post_navigation();
-      endif;
+    if ( 'post' === get_post_type() ):
+      soapatricknine_post_navigation();
     endif;
     
   else :

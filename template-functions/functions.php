@@ -34,7 +34,7 @@ if ( ! function_exists( 'soapatricknine_posted_on' ) ) :
     $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
     $time_string = sprintf( $time_string, esc_attr( get_the_date( DATE_W3C ) ), esc_html( get_the_date() ) );
 
-    echo  '<div>' . $time_string .' </div>'; // WPCS: XSS OK.
+    echo '<div>' . $time_string .' </div>'; // WPCS: XSS OK.
   }
 endif;
 
@@ -48,7 +48,7 @@ if ( ! function_exists( 'soapatricknine_modified_on' ) ) :
     $time_string = '<time class="entry-date modified" datetime="%1$s">%2$s</time>';
     $time_string = sprintf( $time_string, esc_attr( get_the_modified_date( DATE_W3C ) ), esc_html( get_the_modified_date() ) );
 
-    echo  '<div>Last Update: ' . $time_string .' </div>'; // WPCS: XSS OK.
+    echo '<div>Last Update: ' . $time_string .' </div>'; // WPCS: XSS OK.
   }
 endif;
 
@@ -396,7 +396,7 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
           <path class="primary" d="M138.07 320h171.84l72.93 117.29a6.4 6.4 0 0 1 .09 7.12 6.11 6.11 0 0 1-5.88 3.52H70.89a6.08 6.08 0 0 1-5.89-3.46 6.45 6.45 0 0 1 .11-7.18z"></path>
           <path class="secondary" d="M112 64h224a16 16 0 0 0 16-16V16a16 16 0 0 0-16-16H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm325.19 339.5L320 215V96h-64v137.27l126.85 204a6.4 6.4 0 0 1 .09 7.12 6.11 6.11 0 0 1-5.88 3.52H70.89a6.08 6.08 0 0 1-5.89-3.44 6.45 6.45 0 0 1 .11-7.18L192 233.27V96h-64v119L10.79 403.5c-29.3 47.1 4.5 108.5 60.1 108.5h306.2c55.7 0 89.4-61.5 60.1-108.5z"></path>
           </svg>';
-        break;        
+        break;
       case 'factory';
         $svgIcon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline"><path fill="currentColor" d="M404 384h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm-116-12v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-128 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm352-188v272c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h80c13.255 0 24 10.745 24 24v185.167l157.267-78.633C301.052 154.641 320 165.993 320 184v57.167l157.267-78.633C493.052 154.641 512 165.993 512 184zM96 280V64H32v384h448V196.944l-180.422 90.211C294.268 289.81 288 285.949 288 280v-83.056l-180.422 90.211C102.269 289.811 96 285.947 96 280z"></path></svg>';
         break;
@@ -417,7 +417,7 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
         break; 
       case 'box_2';
         $svgIcon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-1.6 4.9-2.5 10-2.5 15.2V464c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V199.8c0-5.2-.8-10.3-2.5-15.2zM32 199.8c0-1.7.3-3.4.8-5.1L83.4 42.9C85.6 36.4 91.7 32 98.6 32H240v168H32v-.2zM480 464c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V232h448v232zm0-264H272V32h141.4c6.9 0 13 4.4 15.2 10.9l50.6 151.8c.5 1.6.8 3.3.8 5.1v.2z"></path></svg>';  
-        break;             
+        break;
       case 'box-dual_2';
         $svgIcon = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path class="secondary" d="M512 224v240a48 48 0 0 1-48 48H48a48 48 0 0 1-48-48V224z"></path>
@@ -441,7 +441,7 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
         break;  
       case 'tags';
         $svgIcon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M625.941 293.823L421.823 497.941c-18.746 18.746-49.138 18.745-67.882 0l-1.775-1.775 22.627-22.627 1.775 1.775c6.253 6.253 16.384 6.243 22.627 0l204.118-204.118c6.238-6.239 6.238-16.389 0-22.627L391.431 36.686A15.895 15.895 0 0 0 380.117 32h-19.549l-32-32h51.549a48 48 0 0 1 33.941 14.059L625.94 225.941c18.746 18.745 18.746 49.137.001 67.882zM252.118 32H48c-8.822 0-16 7.178-16 16v204.118c0 4.274 1.664 8.292 4.686 11.314l211.882 211.882c6.253 6.253 16.384 6.243 22.627 0l204.118-204.118c6.238-6.239 6.238-16.389 0-22.627L263.431 36.686A15.895 15.895 0 0 0 252.118 32m0-32a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.746 18.746-49.138 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118V48C0 21.49 21.49 0 48 0h204.118zM144 124c-11.028 0-20 8.972-20 20s8.972 20 20 20 20-8.972 20-20-8.972-20-20-20m0-28c26.51 0 48 21.49 48 48s-21.49 48-48 48-48-21.49-48-48 21.49-48 48-48z"></path></svg>';
-        break;                
+        break;
       case 'tags-dual';
         $svgIcon = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
           <path class="primary" d="M497.94 225.94L286.06 14.06A48 48 0 0 0 252.12 0H48A48 48 0 0 0 0 48v204.12a48 48 0 0 0 14.06 33.94l211.88 211.88a48 48 0 0 0 67.88 0l204.12-204.12a48 48 0 0 0 0-67.88zM112 160a48 48 0 1 1 48-48 48 48 0 0 1-48 48z"></path>
@@ -450,7 +450,7 @@ if ( ! function_exists( 'soapatricknine_svg_icons' ) ) :
         break;
       case 'patrick';
         $svgIcon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M501.5 66.6l-71.7-26.1 9.5-23.2c1.7-4.1-.2-8.8-4.3-10.5L420.2.6c-4.1-1.7-8.8.2-10.5 4.3l-10 24.7L321.1 1c-8.9-3.2-18 2.7-20.5 9.6L264.1 111c-3 8.3 1.2 17.5 9.6 20.5l73.6 26.8-22.5 55.4c-3.7-1.8-7.3-3.9-11.5-4.8L253.6 197l-10.1-16.1c-11.9-19-28.8-33.5-48.4-42.5 12.8-13 20.7-30.8 20.7-50.4 0-39.7-32.3-72-72-72S72 48.3 72 88c0 20.8 9 39.4 23.1 52.6-22.8 11.3-41.9 29.7-53.8 53.5L5 266.5c-11.8 23.7-2.2 52.6 21.5 64.4.7.3 26.5 14.1 51-5L49.1 453.6c-5.7 25.8 10.6 51.5 36.4 57.3 3.6.8 7 1.1 10.4 1.1 22.3 0 42-15.8 46.8-37.6l17.2-77.5 15.9 19.9V464c0 26.5 21.5 48 48 48s48-21.5 48-48v-52.8c0-18.1-6.2-35.8-17.5-50l-46.5-58.1v-20.3c6.3 3.2 13.1 5.5 20.1 6.9l60.8 12.2-.3.8c-1.7 4.1.2 8.8 4.3 10.5l14.8 6.2c4.1 1.7 8.8-.2 10.5-4.3l6.7-16.6c13-6.4 23.1-18.1 26.2-33.1 1.8-8.8.9-17.8-2.1-26l28.6-70.2 76.6 27.9c8.9 3.3 18-2.8 20.5-9.6L511 87.1c3.1-8.3-1.2-17.4-9.5-20.5zM143.9 48c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40 17.9-40 40-40zm157.2 223.7h-.4l-66.4-13.3c-12.9-2.6-24.3-10.5-31.3-21.6-14.6-23.3-16.3-28-27.1-35.6v113.2l53.5 66.9c6.8 8.5 10.5 19.1 10.5 30V464c0 8.8-7.2 16-16 16s-16-7.2-16-16v-52.8c0-3.6-1.2-7.2-3.5-10L152.2 336h-11.5l-29.2 131.5c-1.7 7.7-9.6 14.2-19.1 12.2-8.6-1.9-14.1-10.5-12.2-19.1l31.6-142.3V206c-5.3 4.7-10.1 10-13.4 16.7l-36.2 72.5c-3.1 6.2-12.1 11.9-21.5 7.2-7.9-4-11.1-13.6-7.2-21.5l36.2-72.5c14.9-29.8 44.9-48.4 78.2-48.4 28 0 53.5 14.2 68.3 37.9l13.7 21.9c2.3 3.7 6.1 6.3 10.4 7.2l66.4 13.3c2.2.4 4.2 1.3 5.9 2.5l-11.5 28.9zm148.8-110.1l-150.3-54.7 25.6-70.4 150.3 54.7-25.6 70.4z"></path></svg>';
-        break;        
+        break;
       case 'patrick-dual';
         $svgIcon = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path class="primary" d="M144 0a48 48 0 1 0 48 48 48.08 48.08 0 0 0-48-48zm357.5 66.6L321.08 1a16 16 0 0 0-20.5 9.6l-43.8 120.3a16 16 0 0 0 9.6 20.5l180.5 65.6a16 16 0 0 0 20.5-9.6L511 87.1a15.93 15.93 0 0 0-9.52-20.5z"></path>
@@ -529,7 +529,7 @@ add_filter('wp_sitemaps_taxonomies', 'soapatricknine_sitemap_remove_tax');
 
 function soapatricknine_sitemap_remove_users($provider, $name) {
   if ( 'users' === $name ) {
-      return false;
+    return false;
   }
   return $provider;
 }
@@ -538,7 +538,7 @@ add_filter('wp_sitemaps_add_provider', 'soapatricknine_sitemap_remove_users', 10
 
 function soapatricknine_sitemap_remove_pages($args, $post_type) {
   if ( 'page' !== $post_type ) {
-      return $args;
+    return $args;
   }
 
   $args['post__not_in'] = isset( $args['post__not_in'] ) ? $args['post__not_in'] : array();
