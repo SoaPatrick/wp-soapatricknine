@@ -568,10 +568,31 @@ function soapatricknine_gallery_block_lightbox( $block_content, $block ) {
   if ( 'core/gallery' !== $block['blockName'] ) {
       return $block_content;
   }
-  $block_content = str_replace( 'a href', 'a data-fslightbox="gallery-'. implode('-', $block['attrs']['ids']) .'" href', $block_content );
+  if($block['attrs']['linkTo'] == 'file') {  
+    $block_content = str_replace( 'a href', 'a data-fslightbox="gallery-'. implode('-', $block['attrs']['ids']) .'"  aria-label="Open in Lightbox" href', $block_content );
+  }
   return $block_content;
 }
 add_filter( 'render_block', 'soapatricknine_gallery_block_lightbox', 10, 2 );
+
+
+/**
+ * add lightbox attribute to image with links
+ *
+ */
+function soapatricknine_image_block_lightbox( $block_content, $block ) {
+  if ( 'core/image' !== $block['blockName']) {
+      return $block_content;
+  }
+
+  if( $block['attrs']['linkDestination'] == 'media') {
+    $block_content = str_replace( 'a href', 'a data-fslightbox aria-label="Open in Lightbox" href', $block_content );
+  } else {
+    $block_content = str_replace( 'a href', 'a aria-label="Open in new window" href', $block_content );
+  }
+  return $block_content;
+}
+add_filter( 'render_block', 'soapatricknine_image_block_lightbox', 10, 2 );
 
 
 /**
