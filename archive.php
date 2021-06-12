@@ -18,11 +18,11 @@ get_header();
         <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post');?>tags/">Tags</a></span>
       <?php else : ?>
         <span class="breadcrumbs__item"><a href="<?php echo get_post_type_archive_link('post'); ?>storage/">Storage</a></span>
-      <?php endif; ?>      
+      <?php endif; ?>
       <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_archive_title();?></span>
-    </nav>  
+    </nav>
 
-    <header>   
+    <header>
       <?php the_archive_title( '<h1>', '</h1>' ); ?>
     </header>
     <div class="site__content">

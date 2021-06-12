@@ -16,14 +16,14 @@ get_header(); ?>
 
   <header>
     <div class="marginal-icon marginal-icon--section">
-      <?php soapatricknine_svg_icons('git-dual'); ?>            
-    </div>       
+      <?php soapatricknine_svg_icons('git-dual'); ?>
+    </div>
     <h1>Changelog</h1>
   </header>
   <div class="site__content">
     <p class="lead">
       A history of changes to this website.
-    </p>    
+    </p>
     <div class="changelog" data-infinite-scroll='{ "path": ".post-navigation__previous", "append": ".changelog__day", "history": false, "scrollThreshold": false, "button" : ".post-navigation__previous" }'>
       <?php
         if( have_posts() ) :
@@ -42,7 +42,7 @@ get_header(); ?>
             $label = $field['choices'][ $value ];
             ?>
               <li>
-                <?php soapatricknine_svg_icons('added'); ?>
+                <?php soapatricknine_svg_icons($value); ?>
                 <strong><?php echo $label ?></strong>
                 <?php the_title(); ?>
               </li>

@@ -12,7 +12,7 @@
 ?>
 
 <!doctype html>
-<html <?php language_attributes(); ?> data-color="pink" data-theme="dark" data-nav="left">
+<html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@
     elseif(is_page_template('template-pages/patrick-page.php')):
       echo 'data-theme="red"';
     elseif(is_page_template('template-pages/privacy-page.php')):
-      echo 'data-theme="black"';    
+      echo 'data-theme="black"';
     endif;
   ?>
 >

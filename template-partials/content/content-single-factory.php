@@ -15,12 +15,12 @@
     <span class="breadcrumbs__item breadcrumbs__item--last"><?php the_title() ?></span>
   </nav>
 
-  <article id="factory-<?php the_ID(); ?>" <?php post_class('post'); ?>>    
+  <article id="factory-<?php the_ID(); ?>" <?php post_class('post'); ?>>
     <header>
       <div class="marginal-icon">
-        <?php soapatricknine_svg_icons('factory'); ?>                   
+        <?php soapatricknine_svg_icons('factory'); ?>
       </div>
-      <div class="post__meta">          
+      <div class="post__meta">
         <?php
           soapatricknine_posted_on();
           soapatricknine_edit_post();

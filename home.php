@@ -21,7 +21,7 @@ get_header();
           <div class="marginal-icon marginal-icon--section">
             <?php soapatricknine_svg_icons('box-dual'); ?>
           </div>
-        <?php endif; ?>            
+        <?php endif; ?>
         <h1>SoapBox<?php soapatricknine_rss_feed_button('post'); ?></h1>
       </header>
       <div class="site__content">
@@ -33,7 +33,7 @@ get_header();
             <a href="<?php echo get_post_type_archive_link('post'); ?>storage/">Storage &rarr;</a>
             <a href="<?php echo get_post_type_archive_link('post'); ?>tags/">Tags &rarr;</a>
           </nav>
-        <?php endif; ?>        
+        <?php endif; ?>
         <?php
           while ( have_posts() ) : the_post();
             get_template_part( 'template-partials/content/content-list', get_post_type() );
@@ -41,7 +41,7 @@ get_header();
 
           soapatricknine_posts_navigation();
         ?>
-      </div>  
+      </div>
     <?php
   else :
 

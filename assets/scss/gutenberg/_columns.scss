@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .wp-block-columns {
-
   @include mq(medium) {
     display: grid;
     gap: 2rem;
