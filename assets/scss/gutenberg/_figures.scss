@@ -41,21 +41,21 @@ figure {
   &.alignfull {
     @include mq(tiny) {
       max-width: calc(#{$alignwide} + #{$marginal-width});
-      margin-left: calc(#{$marginal-width} * -1);
+      margin-left: calc((#{$marginal-width}) * -1);
     }
 
     @include mq(medium) {
       max-width: calc(#{$alignwide} + #{$marginal-width--medium});
-      margin-left: calc(#{$marginal-width--medium} * -1);
+      margin-left: calc((#{$marginal-width--medium}) * -1);
     }
 
     figcaption {
       @include mq(tiny) {
-        margin-left: #{$marginal-width};
+        margin-left: calc(#{$marginal-width});
       }
 
       @include mq(medium) {
-        margin-left: #{$marginal-width--medium};
+        margin-left: calc(#{$marginal-width--medium});
       }
     }
   }
