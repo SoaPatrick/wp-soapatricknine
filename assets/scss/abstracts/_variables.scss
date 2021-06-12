@@ -46,8 +46,8 @@ $alignfull: 100%;
 
 // marginal stuff
 $marginal-base: clamp(2rem, 7vw, 5rem);
-$marginal-width: calc(#{$marginal-base} + 1rem);
-$marginal-width--medium: calc(#{$marginal-base} + 2rem);
+$marginal-width: #{$marginal-base} + 1rem;
+$marginal-width--medium: #{$marginal-base} + 2rem;
 
 // Z-Indices
 // z-index: z(navbar);

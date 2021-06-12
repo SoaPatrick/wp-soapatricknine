@@ -21,11 +21,11 @@
     margin: 0;
     width: $marginal-base;
     height: $marginal-base;
-    left: calc(#{$marginal-width} * -1);
+    left: calc((#{$marginal-width}) * -1);
   }
 
   @include mq(medium) {
-    left: calc(#{$marginal-width--medium} * -1);
+    left: calc((#{$marginal-width--medium}) * -1);
   }
 
   img {
