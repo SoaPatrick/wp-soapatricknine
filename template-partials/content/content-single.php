@@ -39,7 +39,7 @@ $format = get_post_format();
         endif;
       ?>
     </header>
-    <?php if(!$format): ?>
+    <?php if ($format != 'quote' || $format != 'link' || $format != 'status'): ?>
       <div class="post__content">
         <?php the_content(); ?>
       </div>
