@@ -12,11 +12,11 @@
   );
 
   @include mq(tiny) {
-    padding-left: calc(#{$marginal-width});
+    padding-left: $marginal-width;
   }
 
   @include mq(medium) {
-    padding-left: calc(#{$marginal-width--medium});
+    padding-left: $marginal-width--medium;
     margin-right: var(--margin__body);
     margin-left: calc(
       var(--margin__body) + var(--width__navbar) + var(--margin__body)
