@@ -13,8 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "background_color": "#cf3a3a",
     "start_url": "https://www.soapatrick.com",
     "display": "standalone"
 }
