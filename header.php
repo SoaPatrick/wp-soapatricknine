@@ -16,6 +16,19 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="
+    <?php 
+      if(is_post_type_archive('lab') || is_singular('lab')):
+        echo '#ec407a';
+      elseif(is_page_template('template-pages/patrick-page.php')):
+        echo '#1c1c1c';
+      elseif(is_page_template('template-pages/privacy-page.php')):
+        echo '#666666';
+      else:
+        echo '#cf3a3a';
+      endif;
+    ?>
+  "/>
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php
     wp_head();
