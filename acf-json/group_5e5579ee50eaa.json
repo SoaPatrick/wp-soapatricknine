@@ -17,7 +17,7 @@
             },
             "taxonomy": "projects",
             "field_type": "select",
-            "allow_null": 0,
+            "allow_null": 1,
             "add_term": 0,
             "save_terms": 0,
             "load_terms": 0,
@@ -32,15 +32,22 @@
                 "operator": "==",
                 "value": "factory"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lab"
+            }
         ]
     ],
     "menu_order": 0,
     "position": "side",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619035004
+    "modified": 1633259237
 }
