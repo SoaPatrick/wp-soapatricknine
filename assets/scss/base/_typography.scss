@@ -160,6 +160,8 @@ ol {
   ul,
   ol {
     margin: 0;
+    padding-left: 1rem;
+    list-style: none;
   }
 
   li::before {

@@ -15,7 +15,7 @@ if ( ! function_exists( 'soapatricknine_setup' ) ) :
     add_theme_support( 'automatic-feed-links' );
 
     // disable comments feed
-    add_filter( 'feed_links_show_comments_feed', '__return_false' );     
+    add_filter( 'feed_links_show_comments_feed', '__return_false' );
 
     //Let WordPress manage the document title.
     add_theme_support( 'title-tag' );
@@ -29,9 +29,9 @@ if ( ! function_exists( 'soapatricknine_setup' ) ) :
     // Add Theme Support for wide and full-width images.
     add_theme_support( 'align-wide' );
 
-    // Disable all Gutenberg color options.
-    add_theme_support( 'editor-color-palette' );
-    add_theme_support( 'disable-custom-colors' );
+    // Add Theme support for editot styles
+    add_theme_support( 'editor-styles' );
+    add_editor_style( '/assets/css/app-editor.css' );
 
     // change default image sizes
     update_option( 'thumbnail_size_w', 150 );
