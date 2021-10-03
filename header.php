@@ -36,6 +36,7 @@
 >
   <?php
     get_template_part( 'template-partials/layout/search');
+    get_template_part( 'template-partials/layout/waves');    
     get_template_part( 'template-partials/layout/navigation'); 
   ?>
 

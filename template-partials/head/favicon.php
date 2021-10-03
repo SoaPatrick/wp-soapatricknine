@@ -17,4 +17,16 @@
 <meta name="application-name" content="SoaPatrick">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color"
+<?php 
+  if(is_post_type_archive('lab') || is_singular('lab')):
+    echo 'content="#ec407a"';
+  elseif(is_page_template('template-pages/patrick-page.php')):
+    echo 'content="#1c1c1c"';
+  elseif(is_page_template('template-pages/privacy-page.php')):
+    echo 'content="#666666"';
+  else:
+    echo 'content="#cf3a3a"';
+  endif;
+?>
+"/>

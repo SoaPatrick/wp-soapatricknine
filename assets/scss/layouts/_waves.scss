@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  #Waves
+\*------------------------------------*/
+
+.waves {
+  overflow-x: hidden;
+  position: relative;
+
+  &__waves {
+    width: auto;
+    height: clamp(20px, 20vw, 200px);
+
+    path {
+      fill: var(--color__search--bg);
+    }
+  }
+  &__filler {
+    height: clamp(0px, 4vw, 41px);
+    background: var(--color__search--bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

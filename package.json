@@ -8,12 +8,10 @@
   },
   "author": "SoaPatrick",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.13.1"
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.39.2"
   }
 }
