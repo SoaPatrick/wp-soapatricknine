@@ -3,46 +3,48 @@ image: node:10.15.3
 pipelines:
   branches:
     master:
-    - step:
-        name: Build CSS
-        caches:
-          - node
-        script:
-          - npm install -g gulp
-          - npm install
-          - gulp
-        artifacts:
-          - assets/css/app.css
-    - step:
-        name: Deploy Theme
-        deployment: production
-        script:
-          - pipe: atlassian/rsync-deploy:0.3.2
-            variables:
-              USER: '$REMOTE_USER'
-              SERVER: '$REMOTE_SERVER'
-              REMOTE_PATH: '$REMOTE_PATH'
-              LOCAL_PATH: '/opt/atlassian/pipelines/agent/build/'
-              EXTRA_ARGS: '--exclude-from=deployment-exclude-list.txt'
+      - step:
+          name: Build CSS
+          caches:
+            - node
+          script:
+            - npm install -g gulp
+            - npm install
+            - gulp
+          artifacts:
+            - assets/css/app.css
+            - assets/css/app-editor.css
+      - step:
+          name: Deploy Theme
+          deployment: production
+          script:
+            - pipe: atlassian/rsync-deploy:0.3.2
+              variables:
+                USER: "$REMOTE_USER"
+                SERVER: "$REMOTE_SERVER"
+                REMOTE_PATH: "$REMOTE_PATH"
+                LOCAL_PATH: "/opt/atlassian/pipelines/agent/build/"
+                EXTRA_ARGS: "--exclude-from=deployment-exclude-list.txt"
     develop:
-    - step:
-        name: Build CSS
-        caches:
-          - node
-        script:
-          - npm install -g gulp
-          - npm install
-          - gulp
-        artifacts:
-          - assets/css/app.css
-    - step:
-        name: Deploy Theme
-        deployment: staging
-        script:
-          - pipe: atlassian/rsync-deploy:0.3.2
-            variables:
-              USER: '$REMOTE_USER'
-              SERVER: '$REMOTE_SERVER'
-              REMOTE_PATH: '$REMOTE_PATH'
-              LOCAL_PATH: '/opt/atlassian/pipelines/agent/build/'
-              EXTRA_ARGS: '--exclude-from=deployment-exclude-list.txt'
+      - step:
+          name: Build CSS
+          caches:
+            - node
+          script:
+            - npm install -g gulp
+            - npm install
+            - gulp
+          artifacts:
+            - assets/css/app.css
+            - assets/css/app-editor.css
+      - step:
+          name: Deploy Theme
+          deployment: staging
+          script:
+            - pipe: atlassian/rsync-deploy:0.3.2
+              variables:
+                USER: "$REMOTE_USER"
+                SERVER: "$REMOTE_SERVER"
+                REMOTE_PATH: "$REMOTE_PATH"
+                LOCAL_PATH: "/opt/atlassian/pipelines/agent/build/"
+                EXTRA_ARGS: "--exclude-from=deployment-exclude-list.txt"
