@@ -1,42 +1,15 @@
 {
     "key": "group_608544a23f80b",
-    "title": "Lab: is Video",
+    "title": "Video",
     "fields": [
-        {
-            "key": "field_608544b1911b5",
-            "label": "is Video",
-            "name": "is_video",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
         {
             "key": "field_608544c1911b6",
             "label": "Video",
             "name": "video",
             "type": "file",
-            "instructions": "",
+            "instructions": "Post Format 'Video' must be set",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_608544b1911b5",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -66,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619346833
+    "modified": 1633260466
 }
