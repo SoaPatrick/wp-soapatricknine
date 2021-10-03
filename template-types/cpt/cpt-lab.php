@@ -22,7 +22,7 @@ function soapatricknine_add_cpt_lab() {
     'label'                 => 'Lab',
     'description'           => 'Lab Items',
     'labels'                => $labels,
-    'supports'              => array( 'title','thumbnail' ),
+    'supports'              => array( 'title','thumbnail','post-formats' ),
     'taxonomies'            => array( '' ),
     'hierarchical'          => false,
     'public'                => true,
