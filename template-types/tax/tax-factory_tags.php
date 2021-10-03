@@ -39,11 +39,11 @@ function soapatricknine_add_tax_factory_tags() {
     'show_admin_column'          => true,
     'show_in_nav_menus'          => true,
     'show_tagcloud'              => false,
-    "rewrite"                     => array( 'slug' => 'factory-tag', 'with_front' => false, ),
+    "rewrite"                     => array( 'slug' => 'factory/tags', 'with_front' => false, ),
     'show_in_rest'               => true,
     'publicly_queryable'         => true,
   ];
   register_taxonomy( "factory_tags", [ "factory" ], $args );
 
 }
-add_action( 'init', 'soapatricknine_add_tax_factory_tags' );
+add_action( 'init', 'soapatricknine_add_tax_factory_tags', 0 );

@@ -43,4 +43,4 @@ function soapatricknine_add_cpt_factory() {
   register_post_type( 'factory', $args );
 
 }
-add_action( 'init', 'soapatricknine_add_cpt_factory', 0 );
+add_action( 'init', 'soapatricknine_add_cpt_factory', 1 );
