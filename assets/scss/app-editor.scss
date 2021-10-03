@@ -1,0 +1,74 @@
+/*------------------------------------*\
+  #Imports
+\*------------------------------------*/
+
+@import "app";
+
+// set font family for page title
+.editor-post-title {
+  font-family: "Recoleta";
+}
+
+// fix captions
+.wp-block-image figcaption,
+.wp-block-video figcaption {
+  font-size: 1rem;
+}
+
+// fix large quote
+blockquote.is-style-large p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+// fix quote citation
+blockquote cite,
+blockquote cite em,
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
+  text-align: left;
+  font-size: 1rem;
+}
+
+// fix image/video block margin
+.wp-block-image,
+.wp-block-video {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+// set width for full alignment
+.edit-post-visual-editor__post-title-wrapper > [data-align="full"],
+.block-editor-block-list__layout.is-root-container > [data-align="full"] {
+  max-width: 1354px !important;
+}
+
+.wp-block[data-align="left"],
+.wp-block[data-align="right"] {
+  float: none !important;
+}
+
+.wp-block[data-align="left"] {
+  > * {
+    float: left;
+  }
+
+  > .wp-block-image {
+    margin: 0.35rem 1rem 1rem 0 !important;
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+.wp-block[data-align="right"] {
+  > * {
+    float: right;
+  }
+
+  > .wp-block-image {
+    margin: 0.35rem 0 1rem 1rem !important;
+    max-width: calc(50% - 0.5rem);
+  }
+}
