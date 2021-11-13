@@ -3,13 +3,13 @@
 \*------------------------------------*/
 
 .marginal-icon {
-  background: var(--color__highlight);
+  background: $color__gray--light;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: $color__white;
-  width: 2rem;
-  height: 2rem;
+  color: var(--color__text);
+  width: 3rem;
+  height: 3rem;
   margin-bottom: 0.5rem;
 
   &--image {
