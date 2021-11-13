@@ -9,7 +9,7 @@ var browserSync = require("browser-sync").create();
  * configs
  */
 var config = {
-  url: "soapatricknine.local/",
+  url: "https://soapatricknine.local",
   scssSrc: "./assets/scss/*.scss",
   scssDest: "./assets/css",
 };
