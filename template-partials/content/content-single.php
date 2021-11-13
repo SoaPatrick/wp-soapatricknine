@@ -21,8 +21,14 @@ $format = get_post_format();
 
   <article id="post-<?php the_ID(); ?>" <?php post_class('post post--single'); ?>>
     <header>
-      <div class="marginal-icon">
-        <?php soapatricknine_svg_icons($format); ?>
+      <div class="marginal-icon<?php if (has_post_thumbnail()): echo ' marginal-icon--image'; endif; ?>">
+        <?php
+          if (has_post_thumbnail()) :
+            the_post_thumbnail( 'thumbnail' );
+          else :
+            soapatricknine_svg_icons($format);
+          endif;
+        ?>
       </div>
       <div class="post__meta">
         <?php
