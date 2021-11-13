@@ -1,17 +1,17 @@
 {
-  "name": "sass-compiler",
-  "version": "1.0.0",
-  "description": "compile sass to css",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "SoaPatrick",
-  "license": "ISC",
-  "dependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.39.2"
-  }
+    "name": "sass-compiler",
+    "version": "1.0.0",
+    "description": "compile sass to css",
+    "main": "gulpfile.js",
+    "scripts": {
+        "dev": "gulp watch"
+    },
+    "author": "SoaPatrick",
+    "license": "ISC",
+    "dependencies": {
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.0.0",
+        "sass": "^1.39.2"
+    }
 }
