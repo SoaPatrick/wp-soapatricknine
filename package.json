@@ -4,7 +4,8 @@
     "description": "compile sass to css",
     "main": "gulpfile.js",
     "scripts": {
-        "dev": "gulp watch"
+        "dev": "gulp watch",
+        "build": "gulp"
     },
     "author": "SoaPatrick",
     "license": "ISC",

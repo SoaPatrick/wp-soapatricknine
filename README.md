@@ -1,18 +1,32 @@
-soapatricknine
-===============
+# SoaPatrickNine
 
-My theme for SoaPatrick.com
+A theme for my personal website. This theme was released on **May 13th 2021**. Development stopped on **January 28th 2022** and the theme isn't maintained since then.
 
-Bitbucket Pipelines
--------------------
+A static version can be found here: [https://archive.soapatrick.com/sp9/](https://archive.soapatrick.com/sp9/)
 
-To configure Bitbucket Pipelines, do the following steps. The current `bitbucket-pipelines.yml` file is configured only for master(production) enviroment. Expand if necessarry.
+## Requirements
 
-1. Enable Pipelines
-2. Configure the following Repository Variables
-  * `REMOTE_USER`
-  * `REMOTE_SERVER`
-  * `REMOTE_PATH`
-3. Create SSH Key and add Public Key to server
-4. Add Known host
-5. Configure deployment environments
+- Node
+- Gulp
+
+## Installation
+
+Clone this repository and run:
+
+```
+npm install
+```
+
+## Development
+
+change the URL of your local Wordpress environment in the `gulpfile.js` then run:
+
+```
+npm run dev
+```
+
+## Production
+
+```
+npm run build
+```
